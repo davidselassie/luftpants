@@ -9,7 +9,7 @@ public class HealthComponent : MonoBehaviour {
 	
 	}
 	
-	override void FixedUpdate () {
+	void FixedUpdate () {
         if (health <= 0.0f) {
             Destroy(this);
         }
