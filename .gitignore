@@ -15,11 +15,6 @@
 
 #Unity3D Generated File On Crash Reports
 sysinfo.txt
-*.sln
-*.csproj
-*.csproj
-*.csproj
-*.csproj
-*.csproj
-luftpants/Assembly-CSharp-vs.csproj
-luftpants/Assembly-CSharp.csproj
+
+# OS files
+.DS_Store
