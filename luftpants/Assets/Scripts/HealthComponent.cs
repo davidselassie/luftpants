@@ -11,7 +11,7 @@ public class HealthComponent : MonoBehaviour {
 
 	void FixedUpdate () {
         if (health <= 0.0f) {
-            Destroy(this);
+            Destroy(gameObject);
         }
 	}
 }
