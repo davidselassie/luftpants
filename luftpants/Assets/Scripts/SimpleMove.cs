@@ -43,17 +43,8 @@ public class SimpleMove : APlayerControlledComponent {
     }
 
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 
-//         //uncomment this to switch to thumbstick spinning
-//        spinDirection = StickSpin(lastX,Input.GetAxis(player + "Horizontal"),
-//                                    lastY,Input.GetAxis(player + "Vertical"));
-//
-//        horizontalInput = spinDirection * spinSpeed;
-//
-//        lastX = Input.GetAxis(player + "Horizontal");
-//        lastY = Input.GetAxis(player + "Vertical");
-//        //
 		float horizontalInput = GetHorizontal();
 		float verticalInput = 0;
         if (GetButton("A")) {
@@ -67,7 +58,6 @@ public class SimpleMove : APlayerControlledComponent {
 
         rigidbody.AddForce(verticalInput * transform.forward);
 
-        //figuring out controller numbers, I guess?
 
     }
 }
