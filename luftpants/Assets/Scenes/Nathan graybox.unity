@@ -161,7 +161,7 @@ Transform:
   m_PrefabInternal: {fileID: 1962011658}
   m_GameObject: {fileID: 477976369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.55999994}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 1239832963}
@@ -207,7 +207,6 @@ GameObject:
   - 23: {fileID: 572750310}
   - 114: {fileID: 572750314}
   - 54: {fileID: 572750316}
-  - 114: {fileID: 572750315}
   - 59: {fileID: 572750317}
   m_Layer: 0
   m_Name: Turret Cannon
@@ -279,26 +278,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4eef6de6d8281f44906e7a547717564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 'P1 '
+  player: 'K1 '
   projectile: {fileID: 100000, guid: 49854012db34d2a42957784ed7fa206e, type: 2}
   launchPoint: {x: 0, y: .5, z: 0}
---- !u!114 &572750315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 572750309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d570e6bbb3765b94ba2e813c47790355, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: 'P1 '
-  maxSpeed: 10
-  burstSpeed: 5
   spinSpeed: .5
-  horizontalInput: 0
-  verticalInput: 0
 --- !u!54 &572750316
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -308,7 +291,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1.70000005
   m_Drag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -873,6 +856,7 @@ MonoBehaviour:
   player: 'P1 '
   projectile: {fileID: 100000, guid: 49854012db34d2a42957784ed7fa206e, type: 2}
   launchPoint: {x: 0, y: .5, z: 0}
+  spinSpeed: .5
 --- !u!23 &1283946995
 Renderer:
   m_ObjectHideFlags: 0
@@ -1129,6 +1113,10 @@ Prefab:
     - target: {fileID: 11400006, guid: 4647e10daddf91142b00dd4353c5a137, type: 2}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400008, guid: 4647e10daddf91142b00dd4353c5a137, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.55999994
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4647e10daddf91142b00dd4353c5a137, type: 2}

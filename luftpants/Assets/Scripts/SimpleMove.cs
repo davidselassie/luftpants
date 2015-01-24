@@ -13,10 +13,6 @@ public class SimpleMove : MonoBehaviour {
     public float horizontalInput;
     public float verticalInput;
 
-    private float lastX = 0f;
-    private float lastY = 0f;
-    private int spinDirection = 0; //positive is clockwise, negative is counterclockwise
-
 
 	// Use this for initialization
 	void Awake () {
@@ -52,15 +48,6 @@ public class SimpleMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-//         //uncomment this to switch to thumbstick spinning
-//        spinDirection = StickSpin(lastX,Input.GetAxis(player + "Horizontal"),
-//                                    lastY,Input.GetAxis(player + "Vertical"));
-//
-//        horizontalInput = spinDirection * spinSpeed;
-//
-//        lastX = Input.GetAxis(player + "Horizontal");
-//        lastY = Input.GetAxis(player + "Vertical");
-//        //
         horizontalInput = Input.GetAxis(player + "Horizontal");
 
 
@@ -75,6 +62,8 @@ public class SimpleMove : MonoBehaviour {
         rigidbody.AddTorque(horizontalInput * Vector3.up);
 
         rigidbody.AddForce(verticalInput * transform.forward);
+
+        //figuring out controller numbers, I guess?
 
     }
 }
