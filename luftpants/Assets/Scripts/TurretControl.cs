@@ -12,8 +12,7 @@ public class TurretControl : APlayerControlledComponent {
 	}
 
 	void FixedUpdate () {
-		float verticalInput = GetVertical();
-
-        rigidbody.AddTorque(verticalInput * Vector3.up);
+		Vector3 axesInput = GetAxes();
+		this.transform.rotation = Quaternion.FromToRotation(Vector3.forward, axesInput);
 	}
 }

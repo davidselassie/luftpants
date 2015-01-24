@@ -13,6 +13,10 @@ public abstract class APlayerControlledComponent : MonoBehaviour {
 		return Input.GetAxis(String.Format ("P{0} Vertical", this.Player));
 	}
 
+	protected Vector3 GetAxes () {
+		return new Vector3(GetHorizontal(), 0.0f, GetVertical());
+	}
+
 	protected bool GetButton (String button) {
 		return Input.GetButton (String.Format ("P{0} {1}", this.Player, button));
 	}
