@@ -8,7 +8,7 @@ public class HealthComponent : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+
 	void FixedUpdate () {
         if (health <= 0.0f) {
             Destroy(this);

@@ -6,13 +6,13 @@ public class DamagingComponent : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 
     void OnCollisionEnter (Collision collision) {
         foreach (ContactPoint contact in collision.contacts) {
-            HealthComponent otherHealth = contact.otherCollider.gameObject.GetComponent<HealthComponent>();
-            if (otherHealth) {
+            HealthComponent otherHealth = contact.otherCollider.GetComponent<HealthComponent>();
+            if (otherHealth != null) {
                 otherHealth.health -= damage;
             }
         }
