@@ -9,7 +9,7 @@ public class DamagingComponent : MonoBehaviour {
 	
 	}
 
-    override void OnCollisionEnter (Collision collision) {
+    void OnCollisionEnter (Collision collision) {
         foreach (ContactPoint contact in collision.contacts) {
             HealthComponent otherHealth = contact.otherCollider.gameObject.GetComponent<HealthComponent>();
             if (otherHealth) {

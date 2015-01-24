@@ -14,8 +14,9 @@ public class SimpleMove : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start () {
-
+	void Awake () {
+        rigidbody.drag = 0.7f;
+        rigidbody.angularDrag = 0.7f;
 	}
 	
 	// Update is called once per frame
