@@ -14,6 +14,8 @@ public class DamagingComponent : MonoBehaviour {
             HealthComponent otherHealth = contact.otherCollider.GetComponent<HealthComponent>();
             if (otherHealth != null) {
                 otherHealth.health -= damage;
+                BulletController bulletController = GetComponent<BulletController>();
+                if(bulletController != null) bulletController.Impact();
             }
         }
     }

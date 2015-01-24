@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MadManGunnerAI : MonoBehaviour {
 
-    float FirePeriod = 1.0f;
+    public float FirePeriod = 1.0f;
     private float NextFireTime;
 
 	// Use this for initialization
