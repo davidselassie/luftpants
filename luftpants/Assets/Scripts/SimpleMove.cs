@@ -2,17 +2,14 @@
 using System.Collections;
 
 
-public class SimpleMove : MonoBehaviour {
-
-    public string player = "P1 ";
-
+public class SimpleMove : APlayerControlledComponent {
     public float maxSpeed = 10f;
     public float burstSpeed = 5f;
     public float spinSpeed = 10f;
 
-    public float horizontalInput;
-    public float verticalInput;
-
+//    private float lastX = 0f;
+//    private float lastY = 0f;
+//    private int spinDirection = 0; //positive is clockwise, negative is counterclockwise
 
 	// Use this for initialization
 	void Awake () {
@@ -48,15 +45,22 @@ public class SimpleMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        horizontalInput = Input.GetAxis(player + "Horizontal");
-
-
-        if(Input.GetButton(player + "A"))
+//         //uncomment this to switch to thumbstick spinning
+//        spinDirection = StickSpin(lastX,Input.GetAxis(player + "Horizontal"),
+//                                    lastY,Input.GetAxis(player + "Vertical"));
+//
+//        horizontalInput = spinDirection * spinSpeed;
+//
+//        lastX = Input.GetAxis(player + "Horizontal");
+//        lastY = Input.GetAxis(player + "Vertical");
+//        //
+		float horizontalInput = GetHorizontal();
+		float verticalInput = 0;
+        if (GetButton("A")) {
             verticalInput = burstSpeed;
-        else if (Input.GetButton(player + "B"))
+		} else if (GetButton("B")) {
             verticalInput = -1f * burstSpeed;
-        else
-            verticalInput = 0f;
+		}
 
 
         rigidbody.AddTorque(horizontalInput * Vector3.up);
