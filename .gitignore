@@ -21,3 +21,5 @@ sysinfo.txt
 *.csproj
 *.csproj
 *.csproj
+luftpants/Assembly-CSharp-vs.csproj
+luftpants/Assembly-CSharp.csproj
