@@ -85,6 +85,8 @@ GameObject:
   - 33: {fileID: 364501708}
   - 135: {fileID: 364501707}
   - 23: {fileID: 364501706}
+  - 114: {fileID: 364501709}
+  - 54: {fileID: 364501710}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -143,6 +145,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 364501704}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &364501709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 364501704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a57aa710fb414d729cb77d6caf26463, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+--- !u!54 &364501710
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 364501704}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &447598419
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,8 +250,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 447598419}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: .382683486, y: 0, z: 0, w: .923879564}
+  m_LocalPosition: {x: 0, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -320,6 +349,8 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1916772142}
+  - 114: {fileID: 1916772143}
+  - 114: {fileID: 1916772144}
   m_Layer: 0
   m_Name: Bullet Spawner
   m_TagString: Untagged
@@ -340,3 +371,28 @@ Transform:
   - {fileID: 364501705}
   m_Father: {fileID: 1709280822}
   m_RootOrder: 1
+--- !u!114 &1916772143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916772141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0975c720380e03458d9164e54a21846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpawnPeriod: .5
+  Seed: {fileID: 364501704}
+  BulletSpeed: 50
+--- !u!114 &1916772144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1916772141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1325bc78c4c79254dbee4ae91cc31a77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
