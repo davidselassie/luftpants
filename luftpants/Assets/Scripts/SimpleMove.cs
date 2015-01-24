@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
+[RequireComponent(typeof(Rigidbody))]
 public class SimpleMove : APlayerControlledComponent {
     public float maxSpeed = 10f;
     public float burstSpeed = 5f;
@@ -10,12 +10,6 @@ public class SimpleMove : APlayerControlledComponent {
 //    private float lastX = 0f;
 //    private float lastY = 0f;
 //    private int spinDirection = 0; //positive is clockwise, negative is counterclockwise
-
-	// Use this for initialization
-	void Awake () {
-        rigidbody.drag = 0.7f;
-        rigidbody.angularDrag = 0.2f;
-	}
 
     int Average(int[] arr){
         int sum = arr[0] + arr[1] + arr[2] + arr[3] + arr[4] + arr[5];
@@ -44,20 +38,16 @@ public class SimpleMove : APlayerControlledComponent {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+		float rotationAmount = GetHorizontal();
+		float thrust = 0.0f;
 
-		float horizontalInput = GetHorizontal();
-		float verticalInput = 0;
         if (GetButton("A")) {
-            verticalInput = burstSpeed;
+			thrust = this.burstSpeed;
 		} else if (GetButton("B")) {
-            verticalInput = -1f * burstSpeed;
+			thrust = -this.burstSpeed;
 		}
 
-
-        rigidbody.AddTorque(horizontalInput * Vector3.up);
-
-        rigidbody.AddForce(verticalInput * transform.forward);
-
-
+		rigidbody.AddTorque(rotationAmount * Vector3.up);
+		rigidbody.AddForce(this.transform.rotation * Vector3.forward * thrust);
     }
 }

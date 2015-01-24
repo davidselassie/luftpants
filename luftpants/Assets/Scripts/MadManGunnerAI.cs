@@ -1,21 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(TurretControl))]
 public class MadManGunnerAI : MonoBehaviour {
-
-    public float FirePeriod = 1.0f;
-    private float NextFireTime;
 
 	// Use this for initialization
 	void Start () {
-        NextFireTime = Time.time + FirePeriod;
+
 	}
-	
-	// Update is called once per frame
-    void Update () {
-	    if (Time.time > NextFireTime) {
-            GetComponent<GunController>().Fire();
-            NextFireTime = Time.time + FirePeriod;
+
+    void FixedUpdate () {
+		TurretControl turret = GetComponent<TurretControl>();
+		if (turret && turret.CanFire()) {
+			turret.Fire();
         }
 	}
 }
