@@ -151,6 +151,7 @@ GameObject:
   - 114: {fileID: 572750314}
   - 54: {fileID: 572750316}
   - 114: {fileID: 572750315}
+  - 59: {fileID: 572750317}
   m_Layer: 0
   m_Name: Turret Cannon
   m_TagString: Untagged
@@ -216,7 +217,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 572750309}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4eef6de6d8281f44906e7a547717564, type: 3}
   m_Name: 
@@ -236,6 +237,7 @@ MonoBehaviour:
   player: 'P1 '
   maxSpeed: 10
   burstSpeed: 5
+  spinSpeed: .5
   horizontalInput: 0
   verticalInput: 0
 --- !u!54 &572750316
@@ -253,6 +255,36 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!59 &572750317
+HingeJoint:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 572750309}
+  m_ConnectedBody: {fileID: 692335000}
+  m_Anchor: {x: 0, y: -1, z: 0}
+  m_Axis: {x: 0, y: 0, z: 1}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: .790000081, z: -5.96046448e-08}
+  m_UseSpring: 0
+  m_Spring:
+    spring: 0
+    damper: 0
+    targetPosition: 0
+  m_UseMotor: 0
+  m_Motor:
+    targetVelocity: 0
+    force: 0
+    freeSpin: 0
+  m_UseLimits: 0
+  m_Limits:
+    min: 0
+    max: 0
+    minBounce: 0
+    maxBounce: 0
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
 --- !u!1 &692334994
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +319,7 @@ MonoBehaviour:
   player: 'P1 '
   maxSpeed: 10
   burstSpeed: 5
+  spinSpeed: .5
   horizontalInput: 0
   verticalInput: 0
 --- !u!23 &692334996
@@ -504,7 +537,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1567897000}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: 0, y: 7.94000006, z: -.310000002}
+  m_LocalPosition: {x: 0, y: 15, z: -.310000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
