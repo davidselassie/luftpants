@@ -14,7 +14,6 @@ public class HealthComponent : MonoBehaviour {
 	void FixedUpdate () {
         if (health <= 0.0f) {
             Destroy(gameObject);
-            //GameState.PlayIsFinished = true;
         }
         ParticleSystem particleSystem = GetComponent<ParticleSystem> ();
         particleSystem.emissionRate = ((MaxHealth - health) / MaxHealth) * MaxEmissionRate;

@@ -4568,7 +4568,7 @@ MonoBehaviour:
   Player: 0
   maxSpeed: 10
   burstSpeed: 10
-  spinSpeed: 10
+  spinSpeed: 100
 --- !u!114 &563216196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6037,10 +6037,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d570e6bbb3765b94ba2e813c47790355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 0
+  Player: 2
   maxSpeed: 10
   burstSpeed: 10
-  spinSpeed: 10
+  spinSpeed: 100
 --- !u!114 &685752977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8023,7 +8023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4eef6de6d8281f44906e7a547717564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 0
+  Player: 1
   bulletPrefab: {fileID: 100000, guid: c58c0a373dadc9547846ff2e4f6d23b5, type: 2}
   muzzle: {fileID: 102348988}
   bulletVelocity: 50
@@ -10230,7 +10230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4eef6de6d8281f44906e7a547717564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 0
+  Player: 3
   bulletPrefab: {fileID: 100000, guid: c58c0a373dadc9547846ff2e4f6d23b5, type: 2}
   muzzle: {fileID: 2001134684}
   bulletVelocity: 50
@@ -15179,6 +15179,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f3a3605c02eb53948afe3e15a10f8b02, type: 2}
+      propertyPath: Player
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f3a3605c02eb53948afe3e15a10f8b02, type: 2}
+      propertyPath: Player
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f3a3605c02eb53948afe3e15a10f8b02, type: 2}
+      propertyPath: spinSpeed
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3a3605c02eb53948afe3e15a10f8b02, type: 2}
   m_RootGameObject: {fileID: 685752970}
@@ -16092,6 +16104,14 @@ Prefab:
     - target: {fileID: 400010, guid: f3a3605c02eb53948afe3e15a10f8b02, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f3a3605c02eb53948afe3e15a10f8b02, type: 2}
+      propertyPath: Player
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f3a3605c02eb53948afe3e15a10f8b02, type: 2}
+      propertyPath: spinSpeed
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f3a3605c02eb53948afe3e15a10f8b02, type: 2}
