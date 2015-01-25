@@ -91,12 +91,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 400002, guid: a257bd8baa5198f46a664949174666f6, type: 2}
+  - {fileID: 400000, guid: a257bd8baa5198f46a664949174666f6, type: 2}
   shipPrefabs:
-  - {fileID: 100010, guid: f3a3605c02eb53948afe3e15a10f8b02, type: 2}
-  - {fileID: 100010, guid: f3a3605c02eb53948afe3e15a10f8b02, type: 2}
+  - {fileID: 100002, guid: 1a04e1ab0ef8bcc4f8d99c0721493934, type: 2}
+  - {fileID: 100006, guid: aec9d61d794de42e5b8cb87527becf98, type: 2}
   playerCount: 4
+  gameState: {fileID: 11400002}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,10 +110,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreMaster: {fileID: 0}
+  UI: {fileID: 0}
   Logo: {fileID: 0}
   Instructions: {fileID: 0}
   Credits: {fileID: 0}
   Results: {fileID: 0}
+  Scenes: []
+  SceneList: []
   NumberOfRounds: 3
   CurrentPhase: 0
   LogoTime: 1

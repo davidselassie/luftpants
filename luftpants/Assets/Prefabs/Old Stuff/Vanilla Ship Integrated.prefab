@@ -293,6 +293,7 @@ MonoBehaviour:
   Player: 3
   bulletPrefab: {fileID: 100000, guid: c58c0a373dadc9547846ff2e4f6d23b5, type: 2}
   muzzle: {fileID: 400004}
+  muzzleFlash: {fileID: 0}
   bulletVelocity: 50
   reloadSeconds: 1
 --- !u!114 &11400002
@@ -324,6 +325,15 @@ MonoBehaviour:
   health: 100
   MaxHealth: 100
   MaxEmissionRate: 15
+  immortal: 0
+  useThreeParticleTypes: 0
+  lowDamage: {fileID: 0}
+  lowDamageEmissionRate: 5
+  medDamage: {fileID: 0}
+  medDamageEmissionRate: 5
+  highDamage: {fileID: 0}
+  highDamageEmissionRate: 5
+  deathPrefab: {fileID: 0}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
