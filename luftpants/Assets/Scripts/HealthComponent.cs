@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HealthComponent : MonoBehaviour {
+public class HealthComponent : SafeMonoBehavior {
     public float health = 100.0f;
     public float MaxHealth = 100.0f;
     public float MaxEmissionRate = 5f;
@@ -51,7 +51,7 @@ public class HealthComponent : MonoBehaviour {
 		}
 	}
 
-	void OnDestroy () {
+	public override void SafeOnDestroy () {
 		Instantiate(this.deathPrefab, transform.position, transform.rotation);
 	}
 }
