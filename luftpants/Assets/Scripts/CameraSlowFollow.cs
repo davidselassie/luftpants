@@ -11,9 +11,7 @@ public class CameraSlowFollow : MonoBehaviour {
 
 		
 		
-		// Use this for initialization
-		
-		// Update is called once per frame
+		// (in New York accent) "Hey I'm changing this script over here!"
 		
 		void Update () {
 			
