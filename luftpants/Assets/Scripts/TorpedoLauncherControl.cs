@@ -4,6 +4,7 @@ using System.Collections;
 public class TorpedoLauncherControl : APlayerControlledComponent {
 	public GameObject torpedoPrefab;
 	public Transform muzzle;
+	public ParticleSystem muzzleFlash;
 	public float reloadSeconds = 1.0f;
 	
 	protected float lastFireTime;
@@ -30,6 +31,9 @@ public class TorpedoLauncherControl : APlayerControlledComponent {
 			pilot.Player = this.Player;
 			
             this.lastFireTime = Time.time;
+			if (this.muzzleFlash != null) {
+				this.muzzleFlash.Play();
+			}
             
             AudioSource audio = GetComponent<AudioSource> ();
             if (audio != null) {
