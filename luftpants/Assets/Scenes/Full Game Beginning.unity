@@ -469,8 +469,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoints: []
   shipPrefabs:
-  - {fileID: 100010, guid: 9f221061a2201fa459d970c1e834b919, type: 2}
-  - {fileID: 100010, guid: 9f221061a2201fa459d970c1e834b919, type: 2}
+  - {fileID: 100006, guid: aec9d61d794de42e5b8cb87527becf98, type: 2}
+  - {fileID: 100002, guid: 7b63f63f9eaa6e147baf92c0cff46786, type: 2}
   playerCount: 4
   gameState: {fileID: 0}
 --- !u!114 &1093247110
@@ -491,8 +491,8 @@ MonoBehaviour:
   Credits: {fileID: 1851783671}
   Results: {fileID: 1719471705}
   Scenes:
-  - CityLevel - Kyle
-  - DesertLevel - Kyle
+  - CityLevel
+  - Nathan Desert
   SceneList: []
   NumberOfRounds: 3
   CurrentPhase: 0
