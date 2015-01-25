@@ -5,19 +5,20 @@ public class Explosion : MonoBehaviour {
 
     public GameObject shrapnel;
     public int shrapnelCount = 6;
+    private int i;
 
 	// Use this for initialization
 	void Awake () {
-
+        i = 0;
 
 	}
 
-    void Update(){
-        for (int i = 0; i < shrapnelCount; i++){
-            GameObject.Instantiate(shrapnel, transform.position, this.transform.rotation);
-            this.transform.eulerAngles += new Vector3(this.transform.eulerAngles.x, 360f / shrapnelCount, this.transform.eulerAngles.z);
-        }
-        
-        GameObject.Destroy(this.gameObject);
+    void FixedUpdate(){
+        if (i < shrapnelCount){
+            GameObject.Instantiate(shrapnel, transform.position + transform.forward / 3f, gameObject.transform.rotation);
+            transform.Rotate(Vector3.up,360f / shrapnelCount);
+            i++;
+        } else
+            GameObject.Destroy(this.gameObject);
     }
 }

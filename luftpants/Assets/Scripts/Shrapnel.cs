@@ -9,7 +9,7 @@ public class Shrapnel : MonoBehaviour {
 
 	// Use this for initialization
 	void Awake () {
-        rigidbody.AddForce(transform.forward * speed);
+        rigidbody.velocity = transform.forward * speed;
         deathTime = Time.time + lifetime;
 	}
 	
