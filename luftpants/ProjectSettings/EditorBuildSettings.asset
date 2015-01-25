@@ -9,3 +9,5 @@ EditorBuildSettings:
     path: Assets/Scenes/David graybox.unity
   - enabled: 1
     path: Assets/Scenes/CityLevel - Kyle.unity
+  - enabled: 1
+    path: Assets/Scenes/DesertLevel - Kyle.unity
