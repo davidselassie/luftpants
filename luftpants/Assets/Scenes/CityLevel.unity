@@ -2621,7 +2621,6 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
-  smokeSystem: {fileID: 0}
 --- !u!1 &228818505
 GameObject:
   m_ObjectHideFlags: 0
@@ -4594,7 +4593,6 @@ MonoBehaviour:
   health: 100
   MaxHealth: 100
   MaxEmissionRate: 15
-  smokeSystem: {fileID: 0}
 --- !u!1 &594143214
 GameObject:
   m_ObjectHideFlags: 0
@@ -4605,6 +4603,8 @@ GameObject:
   - 4: {fileID: 594143215}
   - 33: {fileID: 594143217}
   - 23: {fileID: 594143216}
+  - 54: {fileID: 594143218}
+  - 114: {fileID: 594143219}
   m_Layer: 0
   m_Name: SpireArms
   m_TagString: Untagged
@@ -4653,6 +4653,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 594143214}
   m_Mesh: {fileID: 4300026, guid: 57a321ada02f647c3a26cfaa9089413b, type: 3}
+--- !u!54 &594143218
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 594143214}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 94
+  m_CollisionDetection: 0
+--- !u!114 &594143219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 594143214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593540baf539de8499dd7e77585c5687, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: 10
 --- !u!1 &604643997
 GameObject:
   m_ObjectHideFlags: 0
@@ -6148,7 +6175,6 @@ MonoBehaviour:
   health: 100
   MaxHealth: 100
   MaxEmissionRate: 15
-  smokeSystem: {fileID: 0}
 --- !u!1 &703036387
 GameObject:
   m_ObjectHideFlags: 0
@@ -6583,7 +6609,6 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
-  smokeSystem: {fileID: 0}
 --- !u!199 &831435678
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -8716,7 +8741,6 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
-  smokeSystem: {fileID: 0}
 --- !u!199 &1026365725
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -10589,7 +10613,6 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
-  smokeSystem: {fileID: 0}
 --- !u!199 &1280596389
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -12170,7 +12193,6 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
-  smokeSystem: {fileID: 0}
 --- !u!199 &1390227422
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -13347,7 +13369,6 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
-  smokeSystem: {fileID: 0}
 --- !u!199 &1406872152
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -17481,7 +17502,6 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
-  smokeSystem: {fileID: 0}
 --- !u!199 &2111109698
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0

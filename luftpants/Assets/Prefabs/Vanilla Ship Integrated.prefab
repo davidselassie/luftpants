@@ -173,7 +173,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400008}
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4eef6de6d8281f44906e7a547717564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 0
+  Player: 3
   bulletPrefab: {fileID: 100000, guid: c58c0a373dadc9547846ff2e4f6d23b5, type: 2}
   muzzle: {fileID: 400004}
   bulletVelocity: 50
@@ -306,10 +306,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d570e6bbb3765b94ba2e813c47790355, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 0
+  Player: 2
   maxSpeed: 10
   burstSpeed: 10
-  spinSpeed: 10
+  spinSpeed: 50
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
