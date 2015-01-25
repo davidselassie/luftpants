@@ -1,0 +1,494 @@
+fileFormatVersion: 2
+guid: 57a321ada02f647c3a26cfaa9089413b
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: ABuilding1
+    100002: ABuilding2
+    100004: Antena2
+    100006: Antena3
+    100008: Antena4
+    100010: Antena5
+    100012: Antenna1
+    100014: Building3
+    100016: BuildingCylinder1
+    100018: BuildingCylinder2
+    100020: BuildingCylinder3
+    100022: BuildingCylinder4
+    100024: BuildingCylinder4 1
+    100026: BuildingCylinder4 2
+    100028: //RootNode
+    100030: CubeBuilding1
+    100032: CubeBuilding2
+    100034: CubeBuilding3
+    100036: CubeBuildings
+    100038: Cylinder1
+    100040: Cylinder2
+    100042: Cylinder3
+    100044: HoleTower
+    100046: NarrowBuidling1
+    100048: NarrowBuidling2
+    100050: NarrowBuidling3
+    100052: pCube10
+    100054: pCube12
+    100056: pCube12 1
+    100058: pCube12 2
+    100060: pCube13
+    100062: pCube13 1
+    100064: pCube13 2
+    100066: pCube14
+    100068: pCube15
+    100070: pCube16
+    100072: pCube17
+    100074: pCube18
+    100076: pCube19
+    100078: pCube2
+    100080: pCube2 1
+    100082: pCube2 2
+    100084: pCube20
+    100086: pCube21
+    100088: pCube22
+    100090: pCube23
+    100092: pCube24
+    100094: pCube25
+    100096: pCube26
+    100098: pCube27
+    100100: pCube28
+    100102: pCube3
+    100104: pCube3 1
+    100106: pCube3 2
+    100108: pCube31
+    100110: pCube32
+    100112: pCube33
+    100114: pCube34
+    100116: pCube35
+    100118: pCube36
+    100120: pCube37
+    100122: pCube38
+    100124: pCube39
+    100126: pCube4
+    100128: pCube4 1
+    100130: pCube4 2
+    100132: pCube5
+    100134: pCube5 1
+    100136: pCube5 2
+    100138: pCube6
+    100140: pCube6 1
+    100142: pCube6 2
+    100144: pCube7
+    100146: pCube7 1
+    100148: pCube7 2
+    100150: pCube8
+    100152: pCube8 1
+    100154: pCube8 2
+    100156: pCube9
+    100158: PyramidBuilding1
+    100160: PyramidBuilding2
+    100162: PyramidBuilding3
+    100164: SmallBuildings
+    100166: Spire1
+    100168: Spire_Top
+    100170: SpireArms
+    100172: TwistBuilding
+    100174: TwistBuilding1
+    400000: ABuilding1
+    400002: ABuilding2
+    400004: Antena2
+    400006: Antena3
+    400008: Antena4
+    400010: Antena5
+    400012: Antenna1
+    400014: Building3
+    400016: BuildingCylinder1
+    400018: BuildingCylinder2
+    400020: BuildingCylinder3
+    400022: BuildingCylinder4
+    400024: BuildingCylinder4 1
+    400026: BuildingCylinder4 2
+    400028: //RootNode
+    400030: CubeBuilding1
+    400032: CubeBuilding2
+    400034: CubeBuilding3
+    400036: CubeBuildings
+    400038: Cylinder1
+    400040: Cylinder2
+    400042: Cylinder3
+    400044: HoleTower
+    400046: NarrowBuidling1
+    400048: NarrowBuidling2
+    400050: NarrowBuidling3
+    400052: pCube10
+    400054: pCube12
+    400056: pCube12 1
+    400058: pCube12 2
+    400060: pCube13
+    400062: pCube13 1
+    400064: pCube13 2
+    400066: pCube14
+    400068: pCube15
+    400070: pCube16
+    400072: pCube17
+    400074: pCube18
+    400076: pCube19
+    400078: pCube2
+    400080: pCube2 1
+    400082: pCube2 2
+    400084: pCube20
+    400086: pCube21
+    400088: pCube22
+    400090: pCube23
+    400092: pCube24
+    400094: pCube25
+    400096: pCube26
+    400098: pCube27
+    400100: pCube28
+    400102: pCube3
+    400104: pCube3 1
+    400106: pCube3 2
+    400108: pCube31
+    400110: pCube32
+    400112: pCube33
+    400114: pCube34
+    400116: pCube35
+    400118: pCube36
+    400120: pCube37
+    400122: pCube38
+    400124: pCube39
+    400126: pCube4
+    400128: pCube4 1
+    400130: pCube4 2
+    400132: pCube5
+    400134: pCube5 1
+    400136: pCube5 2
+    400138: pCube6
+    400140: pCube6 1
+    400142: pCube6 2
+    400144: pCube7
+    400146: pCube7 1
+    400148: pCube7 2
+    400150: pCube8
+    400152: pCube8 1
+    400154: pCube8 2
+    400156: pCube9
+    400158: PyramidBuilding1
+    400160: PyramidBuilding2
+    400162: PyramidBuilding3
+    400164: SmallBuildings
+    400166: Spire1
+    400168: Spire_Top
+    400170: SpireArms
+    400172: TwistBuilding
+    400174: TwistBuilding1
+    2300000: ABuilding1
+    2300002: ABuilding2
+    2300004: Antena2
+    2300006: Antena3
+    2300008: Antena4
+    2300010: Antena5
+    2300012: Antenna1
+    2300014: Building3
+    2300016: BuildingCylinder1
+    2300018: BuildingCylinder2
+    2300020: BuildingCylinder3
+    2300022: BuildingCylinder4
+    2300024: BuildingCylinder4 1
+    2300026: BuildingCylinder4 2
+    2300028: //RootNode
+    2300030: CubeBuilding1
+    2300032: CubeBuilding2
+    2300034: CubeBuilding3
+    2300036: Cylinder1
+    2300038: Cylinder2
+    2300040: Cylinder3
+    2300042: HoleTower
+    2300044: NarrowBuidling1
+    2300046: NarrowBuidling2
+    2300048: NarrowBuidling3
+    2300050: pCube10
+    2300052: pCube12
+    2300054: pCube12 1
+    2300056: pCube12 2
+    2300058: pCube13
+    2300060: pCube13 1
+    2300062: pCube13 2
+    2300064: pCube14
+    2300066: pCube15
+    2300068: pCube16
+    2300070: pCube17
+    2300072: pCube18
+    2300074: pCube19
+    2300076: pCube2
+    2300078: pCube2 1
+    2300080: pCube2 2
+    2300082: pCube20
+    2300084: pCube21
+    2300086: pCube22
+    2300088: pCube23
+    2300090: pCube24
+    2300092: pCube25
+    2300094: pCube26
+    2300096: pCube27
+    2300098: pCube28
+    2300100: pCube3
+    2300102: pCube3 1
+    2300104: pCube3 2
+    2300106: pCube31
+    2300108: pCube32
+    2300110: pCube33
+    2300112: pCube34
+    2300114: pCube35
+    2300116: pCube36
+    2300118: pCube37
+    2300120: pCube38
+    2300122: pCube39
+    2300124: pCube4
+    2300126: pCube4 1
+    2300128: pCube4 2
+    2300130: pCube5
+    2300132: pCube5 1
+    2300134: pCube5 2
+    2300136: pCube6
+    2300138: pCube6 1
+    2300140: pCube6 2
+    2300142: pCube7
+    2300144: pCube7 1
+    2300146: pCube7 2
+    2300148: pCube8
+    2300150: pCube8 1
+    2300152: pCube8 2
+    2300154: pCube9
+    2300156: PyramidBuilding1
+    2300158: PyramidBuilding2
+    2300160: PyramidBuilding3
+    2300162: Spire1
+    2300164: Spire_Top
+    2300166: SpireArms
+    2300168: TwistBuilding
+    2300170: TwistBuilding1
+    3300000: ABuilding1
+    3300002: ABuilding2
+    3300004: Antena2
+    3300006: Antena3
+    3300008: Antena4
+    3300010: Antena5
+    3300012: Antenna1
+    3300014: Building3
+    3300016: BuildingCylinder1
+    3300018: BuildingCylinder2
+    3300020: BuildingCylinder3
+    3300022: BuildingCylinder4
+    3300024: BuildingCylinder4 1
+    3300026: BuildingCylinder4 2
+    3300028: //RootNode
+    3300030: CubeBuilding1
+    3300032: CubeBuilding2
+    3300034: CubeBuilding3
+    3300036: Cylinder1
+    3300038: Cylinder2
+    3300040: Cylinder3
+    3300042: HoleTower
+    3300044: NarrowBuidling1
+    3300046: NarrowBuidling2
+    3300048: NarrowBuidling3
+    3300050: pCube10
+    3300052: pCube12
+    3300054: pCube12 1
+    3300056: pCube12 2
+    3300058: pCube13
+    3300060: pCube13 1
+    3300062: pCube13 2
+    3300064: pCube14
+    3300066: pCube15
+    3300068: pCube16
+    3300070: pCube17
+    3300072: pCube18
+    3300074: pCube19
+    3300076: pCube2
+    3300078: pCube2 1
+    3300080: pCube2 2
+    3300082: pCube20
+    3300084: pCube21
+    3300086: pCube22
+    3300088: pCube23
+    3300090: pCube24
+    3300092: pCube25
+    3300094: pCube26
+    3300096: pCube27
+    3300098: pCube28
+    3300100: pCube3
+    3300102: pCube3 1
+    3300104: pCube3 2
+    3300106: pCube31
+    3300108: pCube32
+    3300110: pCube33
+    3300112: pCube34
+    3300114: pCube35
+    3300116: pCube36
+    3300118: pCube37
+    3300120: pCube38
+    3300122: pCube39
+    3300124: pCube4
+    3300126: pCube4 1
+    3300128: pCube4 2
+    3300130: pCube5
+    3300132: pCube5 1
+    3300134: pCube5 2
+    3300136: pCube6
+    3300138: pCube6 1
+    3300140: pCube6 2
+    3300142: pCube7
+    3300144: pCube7 1
+    3300146: pCube7 2
+    3300148: pCube8
+    3300150: pCube8 1
+    3300152: pCube8 2
+    3300154: pCube9
+    3300156: PyramidBuilding1
+    3300158: PyramidBuilding2
+    3300160: PyramidBuilding3
+    3300162: Spire1
+    3300164: Spire_Top
+    3300166: SpireArms
+    3300168: TwistBuilding
+    3300170: TwistBuilding1
+    4300000: Ground
+    4300002: PyramidBuilding1
+    4300004: BuildingCylinder1
+    4300006: BuildingCylinder2
+    4300008: BuildingCylinder3
+    4300010: BuildingCylinder4
+    4300012: Antenna1
+    4300014: Antena2
+    4300016: Antena3
+    4300018: PyramidBuilding2
+    4300020: BuildingCylinder4
+    4300022: Spire1
+    4300024: Spire_Top
+    4300026: SpireArms
+    4300028: Building3
+    4300030: BuildingCylinder4
+    4300032: HoleTower
+    4300034: PyramidBuilding3
+    4300036: CubeBuilding1
+    4300038: pCube2
+    4300040: pCube3
+    4300042: pCube4
+    4300044: pCube5
+    4300046: pCube6
+    4300048: pCube7
+    4300050: pCube8
+    4300052: Antena4
+    4300054: Antena5
+    4300056: CubeBuilding2
+    4300058: pCube2
+    4300060: pCube3
+    4300062: pCube4
+    4300064: pCube5
+    4300066: pCube6
+    4300068: pCube7
+    4300070: pCube8
+    4300072: pCube9
+    4300074: pCube10
+    4300076: CubeBuilding3
+    4300078: pCube2
+    4300080: pCube3
+    4300082: pCube4
+    4300084: pCube5
+    4300086: pCube6
+    4300088: pCube7
+    4300090: pCube8
+    4300092: NarrowBuidling1
+    4300094: pCube12
+    4300096: pCube13
+    4300098: NarrowBuidling2
+    4300100: pCube12
+    4300102: pCube13
+    4300104: NarrowBuidling3
+    4300106: pCube12
+    4300108: pCube13
+    4300110: TwistBuilding1
+    4300112: Cylinder1
+    4300114: Cylinder2
+    4300116: Cylinder3
+    4300118: ABuilding1
+    4300120: ABuilding2
+    4300122: TwistBuilding
+    4300124: pCube14
+    4300126: pCube17
+    4300128: pCube15
+    4300130: pCube24
+    4300132: pCube23
+    4300134: pCube22
+    4300136: pCube21
+    4300138: pCube20
+    4300140: pCube16
+    4300142: pCube19
+    4300144: pCube25
+    4300146: pCube18
+    4300148: pCube28
+    4300150: pCube27
+    4300152: pCube26
+    4300154: pCube33
+    4300156: pCube31
+    4300158: pCube35
+    4300160: pCube36
+    4300162: pCube34
+    4300164: pCube32
+    4300166: pCube37
+    4300168: pCube38
+    4300170: pCube39
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

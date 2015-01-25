@@ -75,7 +75,7 @@ QualitySettings:
     textureQuality: 0
     anisotropicTextures: 1
     antiAliasing: 0
-    softParticles: 0
+    softParticles: 1
     softVegetation: 1
     vSyncCount: 1
     lodBias: 1

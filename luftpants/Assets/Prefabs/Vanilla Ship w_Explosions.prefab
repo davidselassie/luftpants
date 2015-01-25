@@ -64,7 +64,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400006}
-  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: Turret Cannon
   m_TagString: Untagged
@@ -103,6 +102,7 @@ GameObject:
   - 4: {fileID: 400010}
   - 114: {fileID: 11400014}
   - 114: {fileID: 11400012}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: Bullet Spawner
   m_TagString: Untagged
@@ -414,7 +414,7 @@ MonoBehaviour:
   damage: 10
 --- !u!114 &11400004
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 13
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
