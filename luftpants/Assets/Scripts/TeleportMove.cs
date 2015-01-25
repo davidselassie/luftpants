@@ -7,6 +7,9 @@ public class TeleportMove : APlayerControlledComponent {
 	public float spinSpeed = 10f;
 	public float burstSpeed = 500f;
 	public float travelTime = 0.1f;
+	
+	public ParticleSystem thrusterParticles;
+	public float maxEmissionRate = 5f;
 
 	private float stopTime = 0f;
 
@@ -15,10 +18,12 @@ public class TeleportMove : APlayerControlledComponent {
 		
 		if (Time.time > stopTime && Time.time - stopTime < 0.2) {
 			rigidbody.velocity = Vector3.zero;
-			rigidbody.angularVelocity = Vector3.zero; 
+			rigidbody.angularVelocity = Vector3.zero;
+			thrusterParticles.emissionRate = 0f;
 		} else if (GetButton("A")) {
 			rigidbody.velocity = this.burstSpeed * transform.forward;
 			stopTime = Time.time + travelTime;
+			thrusterParticles.emissionRate = maxEmissionRate;
 		}
 		
 		rigidbody.AddTorque(rotationAmount * Vector3.up * spinSpeed);
