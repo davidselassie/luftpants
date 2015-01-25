@@ -414,7 +414,7 @@ MonoBehaviour:
   Player: 0
   maxSpeed: 10
   burstSpeed: 5
-  spinSpeed: 10
+  spinSpeed: 20
   thrusterParticles: {fileID: 0}
   maxEmissionRate: 5
 --- !u!114 &11400004

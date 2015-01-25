@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 54: {fileID: 5400000}
   - 59: {fileID: 5900002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - 23: {fileID: 2300002}
   - 54: {fileID: 5400004}
   - 59: {fileID: 5900004}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400006}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Flail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - 23: {fileID: 2300004}
   - 54: {fileID: 5400006}
   - 59: {fileID: 5900006}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +106,7 @@ GameObject:
   - 23: {fileID: 2300006}
   - 54: {fileID: 5400008}
   - 59: {fileID: 5900008}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ GameObject:
   - 54: {fileID: 5400010}
   - 59: {fileID: 5900010}
   - 114: {fileID: 11400000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - 54: {fileID: 5400012}
   - 114: {fileID: 11400002}
   - 59: {fileID: 5900000}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Arm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -184,7 +184,7 @@ GameObject:
   - 23: {fileID: 2300014}
   - 54: {fileID: 5400014}
   - 59: {fileID: 5900012}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
