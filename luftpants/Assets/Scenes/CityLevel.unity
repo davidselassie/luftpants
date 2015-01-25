@@ -2621,6 +2621,7 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
+  smokeSystem: {fileID: 0}
 --- !u!1 &228818505
 GameObject:
   m_ObjectHideFlags: 0
@@ -3226,6 +3227,10 @@ Prefab:
     - target: {fileID: 11400004, guid: 1a04e1ab0ef8bcc4f8d99c0721493934, type: 2}
       propertyPath: Player
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 1a04e1ab0ef8bcc4f8d99c0721493934, type: 2}
+      propertyPath: spinSpeed
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a04e1ab0ef8bcc4f8d99c0721493934, type: 2}
@@ -4573,7 +4578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: 0
   maxSpeed: 10
-  spinSpeed: 6
+  spinSpeed: 16
 --- !u!114 &563216196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4589,6 +4594,7 @@ MonoBehaviour:
   health: 100
   MaxHealth: 100
   MaxEmissionRate: 15
+  smokeSystem: {fileID: 0}
 --- !u!1 &594143214
 GameObject:
   m_ObjectHideFlags: 0
@@ -6142,6 +6148,7 @@ MonoBehaviour:
   health: 100
   MaxHealth: 100
   MaxEmissionRate: 15
+  smokeSystem: {fileID: 0}
 --- !u!1 &703036387
 GameObject:
   m_ObjectHideFlags: 0
@@ -6576,6 +6583,7 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
+  smokeSystem: {fileID: 0}
 --- !u!199 &831435678
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -8708,6 +8716,7 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
+  smokeSystem: {fileID: 0}
 --- !u!199 &1026365725
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -10580,6 +10589,7 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
+  smokeSystem: {fileID: 0}
 --- !u!199 &1280596389
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -12160,6 +12170,7 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
+  smokeSystem: {fileID: 0}
 --- !u!199 &1390227422
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -13336,6 +13347,7 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
+  smokeSystem: {fileID: 0}
 --- !u!199 &1406872152
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
@@ -17469,6 +17481,7 @@ MonoBehaviour:
   health: 10000
   MaxHealth: 100
   MaxEmissionRate: 5
+  smokeSystem: {fileID: 0}
 --- !u!199 &2111109698
 ParticleSystemRenderer:
   m_ObjectHideFlags: 0
