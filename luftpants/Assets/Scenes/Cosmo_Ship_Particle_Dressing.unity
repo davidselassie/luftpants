@@ -2571,7 +2571,6 @@ MonoBehaviour:
   health: 100
   MaxHealth: 100
   MaxEmissionRate: 30
-  smokeSystem: {fileID: 771572280}
 --- !u!4 &441037246
 Transform:
   m_ObjectHideFlags: 0
