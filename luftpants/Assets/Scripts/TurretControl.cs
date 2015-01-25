@@ -15,8 +15,21 @@ public class TurretControl : APlayerControlledComponent {
 
 	void FixedUpdate () {
 		Vector3 axesInput = GetAxes();
-		if (axesInput.sqrMagnitude > 0.0f) {
-			this.transform.rotation = Quaternion.FromToRotation(Vector3.forward, axesInput);
+		if (axesInput.sqrMagnitude > 0.1f) {
+            Vector3 intendedDirection = axesInput.normalized;
+
+            transform.localRotation = Quaternion.LookRotation(intendedDirection,Vector3.up);
+
+            //ROTATION
+            //transform.RotateAround (transform.position,transform.up,axesInput.x);
+
+            if(transform.localEulerAngles.y > 90 && transform.localEulerAngles.y < 180){
+                transform.localEulerAngles = new Vector3(0,90,0);
+            }
+            if(transform.localEulerAngles.y <= 270 && transform.localEulerAngles.y >= 180){
+                transform.localEulerAngles = new Vector3(0,270,0);
+            }
+            //this.transform.rotation = Quaternion.FromToRotation(Vector3.forward, axesInput);
 		}
 
 		if (GetButton("A")) {

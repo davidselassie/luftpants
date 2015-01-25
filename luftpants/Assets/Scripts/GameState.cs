@@ -7,6 +7,7 @@ public class GameState : MonoBehaviour
 {
     public ScoreMaster scoreMaster;
 
+    public GameObject UI;
     public GameObject Logo;
     public GameObject Instructions;
     public GameObject Credits;
@@ -35,12 +36,15 @@ public class GameState : MonoBehaviour
         }
         if (scoreMaster == null)
             scoreMaster = GetComponent<ScoreMaster> ();
+        scoreMaster.gameState = this;
         scoreMaster.enabled = false;
 
         CurrentPhase = Phases.LOGO;
         Logo.SetActive(true);
         Instructions.SetActive (false);
         Credits.SetActive (false);
+
+        RenderImmortal();
     }
     
     // Update is called once per frame
@@ -57,10 +61,10 @@ public class GameState : MonoBehaviour
             break;
         case Phases.INSTRUCTIONS:
             if (Time.time > InstructionChangeTime && Input.anyKeyDown) {
-                CurrentPhase = Phases.PLAY;
                 Instructions.SetActive(false);
-                scoreMaster.Begin();
-                scoreMaster.enabled=true;
+
+                CurrentPhase = Phases.LOADING;
+                StartNewRound();
             }
             break;
         case Phases.RESULTS:
@@ -74,11 +78,16 @@ public class GameState : MonoBehaviour
                     resultTextBox.text = finalResultText;
                 }else{
                     Results.SetActive(false);
+
                     CurrentPhase = Phases.PLAY;
-                    scoreMaster.Begin();
-                    scoreMaster.enabled = true;
+                    StartNewRound();
                 }
             }
+            break;
+        case Phases.LOADING:
+            scoreMaster.Begin();
+            scoreMaster.enabled=true;
+            CurrentPhase = Phases.PLAY;
             break;
         case Phases.FINAL_RESULTS:
             if (Time.time > ResultsChangeTime && Input.anyKeyDown) {
@@ -87,6 +96,28 @@ public class GameState : MonoBehaviour
             }   
             break;
         }
+    }
+
+    public void StartNewRound(){
+        Application.LoadLevel ("CityLevel - Kyle");
+    }
+    
+    public void RoundFinished(float[] resultScores){
+        Results.SetActive(true);
+        string roundResultText = RenderRoundResults (resultScores);
+        Text resultTextBox = Results.GetComponentInChildren<Text> ();
+        resultTextBox.text = roundResultText;
+        
+        scoreMaster.Clear();
+        scoreMaster.enabled = false;
+        
+        for (int i = 0; i<scores.Length; i++) {
+            scores [i] += resultScores [i];
+        }
+        roundsFinished++;
+        
+        CurrentPhase = Phases.RESULTS;
+        ResultsChangeTime = Time.time + ResultsTime;
     }
 
     private string RenderRoundResults(float[] resultScores){
@@ -127,22 +158,10 @@ public class GameState : MonoBehaviour
         return results;
     }
 
-    public void RoundFinished(float[] resultScores){
-        Results.SetActive(true);
-        string roundResultText = RenderRoundResults (resultScores);
-        Text resultTextBox = Results.GetComponentInChildren<Text> ();
-        resultTextBox.text = roundResultText;
 
-        scoreMaster.Clear();
-        scoreMaster.enabled = false;
-
-        for (int i = 0; i<scores.Length; i++) {
-            scores [i] += resultScores [i];
-        }
-        roundsFinished++;
-
-        CurrentPhase = Phases.RESULTS;
-        ResultsChangeTime = Time.time + ResultsTime;
+    private void RenderImmortal(){
+        DontDestroyOnLoad (UI);
+        DontDestroyOnLoad(this);
     }
     
     public enum Phases
@@ -151,6 +170,7 @@ public class GameState : MonoBehaviour
         INSTRUCTIONS,
         PLAY,
         RESULTS,
+        LOADING,
         FINAL_RESULTS,
         CREDITS
     }

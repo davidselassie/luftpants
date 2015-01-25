@@ -10,6 +10,8 @@ public class ScoreMaster : MonoBehaviour {
 	public List<GameObject> shipPrefabs;
 	public int playerCount;
 
+    public GameState gameState;
+
 	public struct Team {
 		public int PlayerA;
 		public int PlayerB;
@@ -23,6 +25,8 @@ public class ScoreMaster : MonoBehaviour {
 	private List<GameObject> playerShips = new List<GameObject>();
     
     void Start () {
+        if(gameState == null)
+            gameState = GetComponent<GameState> ();
     }
 
     void SpawnShips(){
@@ -79,7 +83,6 @@ public class ScoreMaster : MonoBehaviour {
         scores[players.First()] = score;
         scores[players.Last()] = score;
 
-        GameState gameState = GetComponent<GameState> ();
         gameState.RoundFinished (scores);
     }
 
@@ -91,6 +94,9 @@ public class ScoreMaster : MonoBehaviour {
     }
 
     public void Begin(){
+        spawnPoints = GameObject.FindGameObjectsWithTag("Respawn").Select(x => x.transform).ToList();
+        Debug.Log("spawnPoints.Count:" + spawnPoints.Count);
+        Debug.Log("find.Count:" + (GameObject.FindGameObjectsWithTag("Respawn").Length));
         SpawnShips ();
     }
 }
