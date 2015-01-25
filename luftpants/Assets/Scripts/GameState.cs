@@ -80,6 +80,7 @@ public class GameState : MonoBehaviour
             break;
         case Phases.RESULTS:
             if (Time.time > ResultsChangeTime && Input.anyKeyDown) {
+                scoreMaster.Clear();
                 if(roundsFinished == NumberOfRounds){
                     ResultsChangeTime = Time.time + ResultsTime;
                     CurrentPhase = Phases.FINAL_RESULTS;
@@ -126,8 +127,7 @@ public class GameState : MonoBehaviour
         string roundResultText = RenderRoundResults (resultScores);
         Text resultTextBox = Results.GetComponentInChildren<Text> ();
         resultTextBox.text = roundResultText;
-        
-        scoreMaster.Clear();
+
         scoreMaster.enabled = false;
         
         for (int i = 0; i<scores.Length; i++) {
