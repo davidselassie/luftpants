@@ -43,6 +43,7 @@ public class SimpleMove : APlayerControlledComponent {
 
         if (GetButton("A")) {
 			thrust = this.burstSpeed;
+            Debug.Log("A");
 		} else if (GetButton("B")) {
 			thrust = -this.burstSpeed;
 		}
