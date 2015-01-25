@@ -34,6 +34,9 @@ public class TurretControl : APlayerControlledComponent {
 			newBullet.rigidbody.velocity = newBullet.transform.rotation * Vector3.forward * this.bulletVelocity;
 
 			this.lastFireTime = Time.time;
+
+			AudioSource audio = GetComponent<AudioSource> ();
+			if(audio != null) audio.Play ();
 		}
 	}
 }
