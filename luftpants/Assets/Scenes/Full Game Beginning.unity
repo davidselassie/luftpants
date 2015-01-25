@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .0715159252, g: .20588237, b: .0287629813, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: .552941203}
+  m_Color: {r: .305882365, g: .494117647, b: .866666675, a: .733333349}
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: .552941203}
+  m_Color: {r: .31764707, g: .501960814, b: .886274517, a: .717647076}
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -434,6 +434,102 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: b51bdd57ec848d745a4095f625640ccd, type: 3}
+    - target: {fileID: 22400010, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400010, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.r
+      value: .996078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.g
+      value: .996078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.b
+      value: .996078432
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.a
+      value: .654901981
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400008, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 9028b91391f99f242a9b84209465d170, type: 3}
+    - target: {fileID: 11400000, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.a
+      value: .717647076
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.r
+      value: .31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.g
+      value: .501960814
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.b
+      value: .886274517
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.r
+      value: .305882365
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.g
+      value: .494117647
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.b
+      value: .866666675
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.a
+      value: .733333349
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400010, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400012, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 22400012, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f8418dcbe7b040d4bbb8abd263eafe23, type: 2}
   m_RootGameObject: {fileID: 1654819862}
@@ -494,7 +590,7 @@ MonoBehaviour:
   - CityLevel
   - Nathan Desert
   SceneList: []
-  NumberOfRounds: 3
+  NumberOfRounds: 1
   CurrentPhase: 0
   LogoTime: 1
   InstructionTime: 1
@@ -544,7 +640,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 450}
+  m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1243800023
 MonoBehaviour:
@@ -560,7 +656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Texture: {fileID: 2800000, guid: 3dbb425394f165f4b8dd7f3776c67c35, type: 3}
+  m_Texture: {fileID: 2800000, guid: 9028b91391f99f242a9b84209465d170, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -622,7 +718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .360294104, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
@@ -846,7 +942,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 450}
+  m_SizeDelta: {x: 800, y: 600}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1851783673
 MonoBehaviour:
@@ -861,8 +957,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Texture: {fileID: 2800000, guid: 3eafd501f748cd846880f057dca7509b, type: 3}
+  m_Color: {r: .996078432, g: .996078432, b: .996078432, a: .654901981}
+  m_Texture: {fileID: 2800000, guid: b51bdd57ec848d745a4095f625640ccd, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

@@ -103,6 +103,15 @@ public class GameState : MonoBehaviour
             if (Time.time > ResultsChangeTime && Input.anyKeyDown) {
                 Results.SetActive(false);
                 Credits.SetActive(true);
+                CurrentPhase = Phases.CREDITS;
+            }   
+            break;
+        case Phases.CREDITS:
+            if (Time.time > LogoTime && Input.anyKeyDown) {
+                CurrentPhase = Phases.INSTRUCTIONS;
+                Credits.SetActive (false);
+                InstructionChangeTime = Time.time + InstructionTime;
+                Instructions.SetActive (true);
             }   
             break;
         }
