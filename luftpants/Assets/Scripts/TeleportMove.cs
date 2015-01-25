@@ -19,7 +19,7 @@ public class TeleportMove : APlayerControlledComponent {
 	}
 
 	public bool CanBurst () {
-		return Time.time > this.lastBurstTime + this.cooldownSeconds;
+		return Time.time - this.lastBurstTime > this.cooldownSeconds;
 	}
 
 	void FixedUpdate () {
@@ -28,11 +28,17 @@ public class TeleportMove : APlayerControlledComponent {
 		if (this.stopTime > 0.0f && Time.time >= stopTime) {
 			rigidbody.velocity = Vector3.zero;
 			rigidbody.angularVelocity = Vector3.zero;
-			thrusterParticles.emissionRate = 0f;
+			if (thrusterParticles != null) {
+				thrusterParticles.emissionRate = 0f;
+			}
+
 			this.stopTime = -1.0f;
 		} else if (GetButton("A") && CanBurst()) {
 			rigidbody.velocity = this.burstSpeed * transform.forward;
-			thrusterParticles.emissionRate = maxEmissionRate;
+			if (thrusterParticles != null) {
+				thrusterParticles.emissionRate = maxEmissionRate;
+			}
+
 			this.stopTime = Time.time + this.burstSeconds;
 			this.lastBurstTime = Time.time;
 		}

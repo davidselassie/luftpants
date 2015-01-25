@@ -21,7 +21,10 @@ public class SimpleMove : APlayerControlledComponent {
 			thrust = -this.burstSpeed;
 		}
 
-        rigidbody.AddTorque(rotationAmount * Vector3.up * spinSpeed);
-		rigidbody.AddForce(this.transform.rotation * Vector3.forward * thrust);
+        rigidbody.AddTorque(rotationAmount * Vector3.up * this.spinSpeed);
+		rigidbody.AddForce(transform.rotation * Vector3.forward * thrust);
+		if (thrusterParticles != null) {
+			thrusterParticles.emissionRate = thrust > 0.0f ? this.maxEmissionRate : 0.0f;
+		}
     }
 }
