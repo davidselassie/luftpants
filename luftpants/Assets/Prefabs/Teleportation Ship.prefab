@@ -121,8 +121,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.4198341, y: 6.55848122, z: 8.92768288}
+  m_LocalRotation: {x: 0, y: -.997783184, z: 0, w: -.0665492266}
+  m_LocalPosition: {x: 56.4000015, y: 6.5999999, z: 8.89999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -290,11 +290,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6d1727f46dd0664985baa599d06153d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 0
+  Player: 1
   maxSpeed: 10
-  spinSpeed: 6
+  spinSpeed: 10
   burstSpeed: 500
-  travelTime: .100000001
+  travelTime: .00999999978
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -309,7 +309,9 @@ MonoBehaviour:
   health: 100
   MaxHealth: 100
   MaxEmissionRate: 15
-  smokeSystem: {fileID: 19800000}
+  smokeSystem: []
+  immortal: 0
+  deathPrefab: {fileID: 100000, guid: dc70a477d0dd04d19a7fa4f9b6d0912c, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

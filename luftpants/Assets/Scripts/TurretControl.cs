@@ -4,6 +4,7 @@ using System.Collections;
 public class TurretControl : APlayerControlledComponent {
 	public GameObject bulletPrefab;
     public Transform muzzle;
+	public ParticleSystem muzzleFlash;
     public float bulletVelocity = 50.0f;
 	public float reloadSeconds = 1.0f;
 
@@ -47,6 +48,9 @@ public class TurretControl : APlayerControlledComponent {
 			newBullet.rigidbody.velocity = newBullet.transform.rotation * Vector3.forward * this.bulletVelocity;
 
 			this.lastFireTime = Time.time;
+			if (this.muzzleFlash != null) {
+				this.muzzleFlash.Play();
+			}
 
 			AudioSource audio = GetComponent<AudioSource> ();
 			if (audio != null) {

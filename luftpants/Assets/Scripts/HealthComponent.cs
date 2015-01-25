@@ -6,6 +6,7 @@ public class HealthComponent : MonoBehaviour {
     public float MaxHealth = 100.0f;
     public float MaxEmissionRate = 5f;
 	public bool immortal = false;
+
 	public bool useThreeParticleTypes = false;
 	public ParticleSystem lowDamage;
 	public float lowDamageEmissionRate = 5f;
@@ -15,6 +16,8 @@ public class HealthComponent : MonoBehaviour {
 	public float highDamageEmissionRate = 5f;
 
 	private ParticleSystem smokeSystem;
+
+	public GameObject deathPrefab;
 
 	// Use this for initialization
 	void Start () {
@@ -46,5 +49,9 @@ public class HealthComponent : MonoBehaviour {
 			else
 				smokeSystem.emissionRate = MaxEmissionRate;
 		}
+	}
+
+	void OnDestroy () {
+		Instantiate(this.deathPrefab, transform.position, transform.rotation);
 	}
 }
