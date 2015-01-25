@@ -20,4 +20,8 @@ public abstract class APlayerControlledComponent : MonoBehaviour {
 	protected bool GetButtonDown (String button) {
 		return Input.GetButtonDown (String.Format ("P{0} {1}", this.Player, button));
 	}
+
+	protected bool GetButton (String button) {
+		return Input.GetButton (String.Format ("P{0} {1}", this.Player, button));
+    }
 }
