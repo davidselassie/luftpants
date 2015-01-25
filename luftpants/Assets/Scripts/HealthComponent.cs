@@ -52,6 +52,8 @@ public class HealthComponent : SafeMonoBehavior {
 	}
 
 	public override void SafeOnDestroy () {
-		Instantiate(this.deathPrefab, transform.position, transform.rotation);
+		if (this.deathPrefab != null) {
+			 	Instantiate(this.deathPrefab, transform.position, transform.rotation);
+		}
 	}
 }
