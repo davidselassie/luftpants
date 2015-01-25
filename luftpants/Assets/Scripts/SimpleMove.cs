@@ -15,9 +15,9 @@ public class SimpleMove : APlayerControlledComponent {
 		float rotationAmount = GetHorizontal();
 		float thrust = 0.0f;
 
-        if (GetButton("A")) {
+		if (GetButtonDown("A")) {
 			thrust = this.burstSpeed;
-		} else if (GetButton("B")) {
+		} else if (GetButtonDown("B")) {
 			thrust = -this.burstSpeed;
 		}
 

@@ -33,7 +33,7 @@ public class TeleportMove : APlayerControlledComponent {
 			}
 
 			this.stopTime = -1.0f;
-		} else if (GetButton("A") && CanBurst()) {
+		} else if (GetButtonDown("A") && CanBurst()) {
 			rigidbody.velocity = this.burstSpeed * transform.forward;
 			if (thrusterParticles != null) {
 				thrusterParticles.emissionRate = maxEmissionRate;

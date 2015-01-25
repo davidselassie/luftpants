@@ -33,7 +33,7 @@ public class TurretControl : APlayerControlledComponent {
             //this.transform.rotation = Quaternion.FromToRotation(Vector3.forward, axesInput);
 		}
 
-		if (GetButton("A")) {
+		if (GetButtonDown("A")) {
 			Fire();
 		}
 	}

@@ -15,7 +15,7 @@ public class TorpedoLauncherControl : APlayerControlledComponent {
 	}
 	
 	void FixedUpdate () {
-		if (GetButton ("A")) {
+		if (GetButtonDown ("A")) {
 			if (this.lastTorpedo == null) {
 				Fire();
 			} else {
