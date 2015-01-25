@@ -23,7 +23,6 @@ public class ScoreMaster : MonoBehaviour {
 	private List<GameObject> playerShips = new List<GameObject>();
     
     void Start () {
-        //SpawnShips ();
     }
 
     void SpawnShips(){
@@ -58,8 +57,9 @@ public class ScoreMaster : MonoBehaviour {
     }
 	
 
-	void UpdateFixed () {
-		if (this.playerShips.Count <= 1) {
+	void Update () {
+        playerShips.RemoveAll(item => item == null);
+		if (this.playerShips.Count == 1) {
             GameObject remainingShip = playerShips.First();
             float remainingShipHealth = remainingShip.GetComponentInChildren<HealthComponent>().health;
 

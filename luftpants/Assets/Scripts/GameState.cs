@@ -34,6 +34,7 @@ public class GameState : MonoBehaviour
         }
         if (scoreMaster == null)
             scoreMaster = GetComponent<ScoreMaster> ();
+        scoreMaster.enabled = false;
 
         CurrentPhase = Phases.LOGO;
         Logo.SetActive(true);
@@ -58,6 +59,7 @@ public class GameState : MonoBehaviour
                 CurrentPhase = Phases.PLAY;
                 Instructions.SetActive(false);
                 scoreMaster.Begin();
+                scoreMaster.enabled=true;
             }
             break;
         case Phases.RESULTS:
@@ -67,6 +69,7 @@ public class GameState : MonoBehaviour
                     CurrentPhase = Phases.CREDITS;
                     Credits.SetActive(true);
                 }
+                CurrentPhase = Phases.PLAY;
                 scoreMaster.Begin();
                 scoreMaster.enabled = true;
             }
