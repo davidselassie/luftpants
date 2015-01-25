@@ -12,6 +12,8 @@ public class GameState : MonoBehaviour
     public GameObject Instructions;
     public GameObject Credits;
     public GameObject Results;
+    public List<string> Scenes;
+    public List<string> SceneList;
 
     public int NumberOfRounds = 3;
 
@@ -27,6 +29,13 @@ public class GameState : MonoBehaviour
     private float ResultsChangeTime;
     private int roundsFinished = 0;
     private float[] scores = new float[4];
+
+    void FillSceneList(){
+        SceneList = new List<string> ();
+        for (int i=0; i<NumberOfRounds; i++) {
+            SceneList.Add(Scenes[i%Scenes.Count]);
+        }
+    }
 
     // Use this for initialization
     void Start ()
@@ -45,6 +54,8 @@ public class GameState : MonoBehaviour
         Credits.SetActive (false);
 
         RenderImmortal();
+        if (SceneList.Count != NumberOfRounds)
+            FillSceneList ();
     }
     
     // Update is called once per frame
@@ -78,8 +89,7 @@ public class GameState : MonoBehaviour
                     resultTextBox.text = finalResultText;
                 }else{
                     Results.SetActive(false);
-
-                    CurrentPhase = Phases.PLAY;
+                    CurrentPhase = Phases.LOADING;
                     StartNewRound();
                 }
             }
@@ -99,7 +109,7 @@ public class GameState : MonoBehaviour
     }
 
     public void StartNewRound(){
-        Application.LoadLevel ("CityLevel - Kyle");
+        Application.LoadLevel (SceneList[roundsFinished]);
     }
     
     public void RoundFinished(float[] resultScores){

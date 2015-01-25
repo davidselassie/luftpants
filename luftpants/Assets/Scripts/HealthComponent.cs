@@ -10,13 +10,14 @@ public class HealthComponent : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         health = MaxHealth;
+        if(smokeSystem == null)
+            smokeSystem = smokeSystem.GetComponentInChildren<ParticleSystem> ();
 	}
 
 	void FixedUpdate () {
         if (health <= 0.0f) {
             Destroy(gameObject);
         }
-        smokeSystem = smokeSystem.GetComponent<ParticleSystem> ();
         smokeSystem.emissionRate = ((MaxHealth - health) / MaxHealth) * MaxEmissionRate;
 	}
 

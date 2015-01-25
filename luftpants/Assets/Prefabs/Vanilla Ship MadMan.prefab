@@ -333,9 +333,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee721d00eab7f4c758b514efcb85e2ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
-  MaxHealth: 100
+  health: 40
+  MaxHealth: 40
   MaxEmissionRate: 15
+  smokeSystem: {fileID: 19800000}
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
