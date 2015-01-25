@@ -7,7 +7,6 @@ public class GameState : MonoBehaviour
     public GameObject Logo;
     public GameObject Instructions;
     public GameObject Credits;
-    public List<GameObject> Players;
 
     public Phases CurrentPhase;
     public static bool PlayIsFinished;
@@ -20,8 +19,6 @@ public class GameState : MonoBehaviour
     void Start ()
     {
         CurrentPhase = Phases.LOGO;
-        
-        foreach(GameObject player in Players){player.SetActive(false);}
         Logo.SetActive(true);
         Instructions.SetActive (false);
         Credits.SetActive (false);
@@ -43,14 +40,10 @@ public class GameState : MonoBehaviour
             if (Time.time > InstructionChangeTime && Input.anyKeyDown) {
                 CurrentPhase = Phases.PLAY;
                 Instructions.SetActive(false);
-                foreach(GameObject player in Players){player.SetActive(true);}
             }
             break;
         case Phases.PLAY:
             if(PlayIsFinished){
-                foreach(GameObject player in Players){
-                    if(player != null) player.SetActive(false);
-                }
                 CurrentPhase = Phases.CREDITS;
                 Credits.SetActive(true);
             }

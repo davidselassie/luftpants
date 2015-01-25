@@ -388,7 +388,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a763253282202b6459f24bf220bea8b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 5
   lifetime: .5
 --- !u!114 &327189267
 MonoBehaviour:
@@ -435,7 +435,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: .5
+  m_Radius: .100000001
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &327189270
 MeshFilter:
@@ -471,7 +471,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!1 &351300301
 GameObject:
@@ -4266,7 +4266,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 2
 --- !u!114 &857125836
 MonoBehaviour:
@@ -4385,7 +4385,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 2
 --- !u!114 &938300074
 MonoBehaviour:
@@ -5547,7 +5547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shrapnel: {fileID: 100000, guid: dda127274d3129646b4242a1db66394c, type: 2}
-  shrapnelCount: 15
+  shrapnelCount: 8
 --- !u!4 &991346178
 Transform:
   m_ObjectHideFlags: 0
@@ -5767,6 +5767,7 @@ MonoBehaviour:
   Player: 0
   speed: 1
   turnSpeed: 5
+  explosion: {fileID: 100000, guid: 263076e536b285745971952e071d5118, type: 2}
 --- !u!54 &1280780004
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5781,7 +5782,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!23 &1280780005
 Renderer:
