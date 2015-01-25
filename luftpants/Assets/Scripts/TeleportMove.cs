@@ -41,6 +41,11 @@ public class TeleportMove : APlayerControlledComponent {
 
 			this.stopTime = Time.time + this.burstSeconds;
 			this.lastBurstTime = Time.time;
+
+			AudioSource audio = GetComponent<AudioSource> ();
+			if (audio != null) {
+				audio.Play ();
+			}
 		}
 		
 		rigidbody.AddTorque(rotationAmount * Vector3.up * this.spinSpeed);

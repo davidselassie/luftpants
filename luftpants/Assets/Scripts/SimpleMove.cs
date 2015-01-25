@@ -17,8 +17,16 @@ public class SimpleMove : APlayerControlledComponent {
 
 		if (GetButton("A")) {
 			thrust = this.burstSpeed;
-		} else if (GetButton("B")) {
-			thrust = -this.burstSpeed;
+
+			AudioSource audio = GetComponent<AudioSource> ();
+			if (audio != null && !audio.isPlaying) {
+				audio.Play ();
+			}
+		} else {
+			AudioSource audio = GetComponent<AudioSource> ();
+			if (audio != null && audio.isPlaying) {
+				audio.Stop ();
+			}
 		}
 
         rigidbody.AddTorque(rotationAmount * Vector3.up * this.spinSpeed);
