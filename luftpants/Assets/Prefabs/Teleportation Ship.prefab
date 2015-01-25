@@ -292,7 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: 0
   maxSpeed: 10
-  spinSpeed: 6
+  spinSpeed: 16
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4eef6de6d8281f44906e7a547717564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Player: 0
+  Player: 1
   bulletPrefab: {fileID: 100000, guid: c58c0a373dadc9547846ff2e4f6d23b5, type: 2}
   muzzle: {fileID: 400000}
   bulletVelocity: 50
