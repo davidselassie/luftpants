@@ -3,27 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class BulletController : MonoBehaviour {
+    public GameObject[] impactExplosions;
 
-    public ParticleSystem[] ImpactParticles;
-    public float SurviveTime = 5f;
+	void OnCollisionEnter () {
+		Destroy(gameObject);
+	}
 
-    public IEnumerator Impact(){
-        MeshRenderer meshRenderer = GetComponent<MeshRenderer> ();
-        meshRenderer.enabled = false;
-        Collider collider = GetComponent<Collider> ();
-        collider.enabled = false;
-
-        List<ParticleSystem> explosions = new List<ParticleSystem> ();
-        foreach (ParticleSystem particleSystem in ImpactParticles) {
-            ParticleSystem impactParticles = (ParticleSystem) Instantiate(particleSystem,transform.position,transform.rotation);
-            impactParticles.enableEmission = true;
-            explosions.Add(impactParticles);
+    void OnDestroy () {
+		foreach (GameObject explosion in this.impactExplosions) {
+			Instantiate(explosion, transform.position, transform.rotation);
         }
-        AudioSource audio = GetComponent<AudioSource> ();
-        if(audio != null) audio.Play ();
-        yield return new WaitForSeconds(SurviveTime);
-
-        foreach(ParticleSystem explosion in explosions){Destroy(explosion);}
-        Destroy(gameObject);
     }
 }

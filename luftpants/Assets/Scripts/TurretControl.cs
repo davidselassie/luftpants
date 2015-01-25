@@ -7,7 +7,7 @@ public class TurretControl : APlayerControlledComponent {
     public float bulletVelocity = 50.0f;
 	public float reloadSeconds = 1.0f;
 
-	private float lastFireTime;
+	protected float lastFireTime;
 	
 	void Start () {
 		this.lastFireTime = Time.time - this.reloadSeconds;
@@ -49,7 +49,9 @@ public class TurretControl : APlayerControlledComponent {
 			this.lastFireTime = Time.time;
 
 			AudioSource audio = GetComponent<AudioSource> ();
-			if(audio != null) audio.Play ();
+			if (audio != null) {
+				audio.Play ();
+			}
 		}
 	}
 }
