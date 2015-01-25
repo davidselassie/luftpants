@@ -4,20 +4,37 @@ using System.Collections.Generic;
 
 public class GameState : MonoBehaviour
 {
+    public ScoreMaster scoreMaster;
+
     public GameObject Logo;
     public GameObject Instructions;
     public GameObject Credits;
+    public GameObject Results;
+
+    public int NumberOfRounds = 3;
 
     public Phases CurrentPhase;
-    public static bool PlayIsFinished;
+    //public static bool PlayIsFinished{
+      //  get{ scoreMaster.RoundComplete }
+    //}
     public float LogoTime = 1f;
     public float InstructionTime = 1f;
+    public float ResultsTime = 1f;
 
     private float InstructionChangeTime;
+    private float ResultsChangeTime;
+    private int roundsFinished = 0;
+    private float[] scores = new float[4];
 
     // Use this for initialization
     void Start ()
     {
+        for (int i = 0; i<scores.Length; i++) {
+            scores [i] = 0f;
+        }
+        if (scoreMaster == null)
+            scoreMaster = GetComponent<ScoreMaster> ();
+
         CurrentPhase = Phases.LOGO;
         Logo.SetActive(true);
         Instructions.SetActive (false);
@@ -40,15 +57,34 @@ public class GameState : MonoBehaviour
             if (Time.time > InstructionChangeTime && Input.anyKeyDown) {
                 CurrentPhase = Phases.PLAY;
                 Instructions.SetActive(false);
+                scoreMaster.Begin();
             }
             break;
-        case Phases.PLAY:
-            if(PlayIsFinished){
-                CurrentPhase = Phases.CREDITS;
-                Credits.SetActive(true);
+        case Phases.RESULTS:
+            if (Time.time > ResultsChangeTime && Input.anyKeyDown) {
+                Results.SetActive(false);
+                if(roundsFinished == NumberOfRounds){
+                    CurrentPhase = Phases.CREDITS;
+                    Credits.SetActive(true);
+                }
+                scoreMaster.Begin();
+                scoreMaster.enabled = true;
             }
             break;
         }
+    }
+
+    public void RoundFinished(float[] resultScores){
+        scoreMaster.Clear();
+        scoreMaster.enabled = false;
+        for (int i = 0; i<scores.Length; i++) {
+            scores [i] += resultScores [i];
+        }
+        roundsFinished++;
+
+        CurrentPhase = Phases.RESULTS;
+        ResultsChangeTime = Time.time + ResultsTime;
+        Results.SetActive(true);
     }
     
     public enum Phases
@@ -56,6 +92,7 @@ public class GameState : MonoBehaviour
         LOGO,
         INSTRUCTIONS,
         PLAY,
+        RESULTS,
         CREDITS
     }
 }

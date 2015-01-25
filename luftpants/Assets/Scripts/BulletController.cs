@@ -4,9 +4,9 @@ using System.Collections;
 public class BulletController : MonoBehaviour {
 
     public ParticleSystem[] ImpactParticles;
+    public float SurviveTime = 5f;
 
-    public void Impact(){
-        Debug.Log ("Impact!");
+    public IEnumerator Impact(){
         MeshRenderer meshRenderer = GetComponent<MeshRenderer> ();
         meshRenderer.enabled = false;
         foreach (ParticleSystem particleSystem in ImpactParticles) {
@@ -15,6 +15,7 @@ public class BulletController : MonoBehaviour {
         }
         AudioSource audio = GetComponent<AudioSource> ();
         if(audio != null) audio.Play ();
-        //Destroy(gameObject);
+        yield return new WaitForSeconds(SurviveTime);
+        Destroy(gameObject);
     }
 }

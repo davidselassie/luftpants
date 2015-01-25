@@ -15,7 +15,7 @@ public class DamagingComponent : MonoBehaviour {
             if (otherHealth != null) {
                 otherHealth.health -= damage;
                 BulletController bulletController = GetComponent<BulletController>();
-                if(bulletController != null) bulletController.Impact();
+                if(bulletController != null) StartCoroutine(bulletController.Impact());
             }
         }
     }
