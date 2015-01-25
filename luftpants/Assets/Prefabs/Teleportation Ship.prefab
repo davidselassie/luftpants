@@ -122,7 +122,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.4000015, y: 160, z: 83.0999985}
+  m_LocalPosition: {x: 74.4000015, y: 160, z: 47.4000015}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -243,7 +243,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: .200000003
+  m_AngularDrag: .5
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: 0
   maxSpeed: 10
-  spinSpeed: 10
+  spinSpeed: 6
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
