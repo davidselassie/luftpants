@@ -33,6 +33,7 @@ GameObject:
   - 198: {fileID: 19800000}
   - 199: {fileID: 19900000}
   - 136: {fileID: 13600000}
+  - 114: {fileID: 11400008}
   m_Layer: 0
   m_Name: Rammy Ship
   m_TagString: Player
@@ -209,7 +210,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -50}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400016}
@@ -921,6 +922,8 @@ MonoBehaviour:
   maxSpeed: 10
   burstSpeed: 10000
   spinSpeed: 2000
+  thrusterParticles: {fileID: 0}
+  maxEmissionRate: 5
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -935,8 +938,28 @@ MonoBehaviour:
   health: 100
   MaxHealth: 100
   MaxEmissionRate: 15
-  smokeSystem: []
   immortal: 0
+  useThreeParticleTypes: 0
+  lowDamage: {fileID: 0}
+  lowDamageEmissionRate: 5
+  medDamage: {fileID: 0}
+  medDamageEmissionRate: 5
+  highDamage: {fileID: 0}
+  highDamageEmissionRate: 5
+  deathPrefab: {fileID: 100000, guid: dc70a477d0dd04d19a7fa4f9b6d0912c, type: 2}
+--- !u!114 &11400008
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 387247dd14e2abf45859ac466ec5c278, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageMultiplier: 10
+  threshholdVelocity: 30
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
