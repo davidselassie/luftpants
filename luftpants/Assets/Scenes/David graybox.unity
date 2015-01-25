@@ -1739,4 +1739,5 @@ MonoBehaviour:
   health: 100
   MaxHealth: 100
   MaxEmissionRate: 15
-  smokeSystem: {fileID: 2033740475}
+  smokeSystem: []
+  immortal: 0
