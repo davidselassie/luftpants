@@ -18,5 +18,6 @@ public class CameraSlowFollow : MonoBehaviour {
 			target = (ship1.transform.position + ship2.transform.position)/2;
 			targetPosition = new Vector3(target.x, transform.position.y, target.z);
 			transform.position = Vector3.Lerp (transform.position, targetPosition, Time.deltaTime * smooth);
+		transform.LookAt (target);
 		}
 	}
