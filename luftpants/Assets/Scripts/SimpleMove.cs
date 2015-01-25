@@ -15,13 +15,16 @@ public class SimpleMove : APlayerControlledComponent {
 		float rotationAmount = GetHorizontal();
 		float thrust = 0.0f;
 
-        if (GetButton("A")) {
+		if (GetButtonDown("A")) {
 			thrust = this.burstSpeed;
-		} else if (GetButton("B")) {
+		} else if (GetButtonDown("B")) {
 			thrust = -this.burstSpeed;
 		}
 
-        rigidbody.AddTorque(rotationAmount * Vector3.up * spinSpeed);
-		rigidbody.AddForce(this.transform.rotation * Vector3.forward * thrust);
+        rigidbody.AddTorque(rotationAmount * Vector3.up * this.spinSpeed);
+		rigidbody.AddForce(transform.rotation * Vector3.forward * thrust);
+		if (thrusterParticles != null) {
+			thrusterParticles.emissionRate = thrust > 0.0f ? this.maxEmissionRate : 0.0f;
+		}
     }
 }
