@@ -497,7 +497,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 1.13676798, z: 3.16354275}
+  m_Size: {x: 5, y: 1.13676798, z: 3.16354275}
   m_Center: {x: 0, y: 0, z: .35734123}
 --- !u!108 &10800000
 Light:
@@ -547,7 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: 0
   thrustSpeed: 10
-  spinSpeed: 10
+  spinSpeed: 30
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
