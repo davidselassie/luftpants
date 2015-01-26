@@ -25,6 +25,7 @@ public class GameState : MonoBehaviour
     public float InstructionTime = 1f;
     public float ResultsTime = 1f;
 
+	private float CreditsChangeTime;
     private float InstructionChangeTime;
     private float ResultsChangeTime;
     private int roundsFinished = 0;
@@ -105,10 +106,11 @@ public class GameState : MonoBehaviour
                 Results.SetActive(false);
                 Credits.SetActive(true);
                 CurrentPhase = Phases.CREDITS;
+				CreditsChangeTime = Time.time + LogoTime;
             }   
             break;
         case Phases.CREDITS:
-            if (Time.time > LogoTime && Input.anyKeyDown) {
+			if (Time.time > CreditsChangeTime && Input.anyKeyDown) {
                 CurrentPhase = Phases.INSTRUCTIONS;
                 Credits.SetActive (false);
                 InstructionChangeTime = Time.time + InstructionTime;
@@ -119,7 +121,7 @@ public class GameState : MonoBehaviour
     }
 
     public void StartNewRound(){
-        Application.LoadLevel (SceneList[roundsFinished]);
+        Application.LoadLevel (SceneList[roundsFinished%NumberOfRounds]);
     }
     
     public void RoundFinished(float[] resultScores){
@@ -179,7 +181,12 @@ public class GameState : MonoBehaviour
 
 
     private void RenderImmortal(){
-        DontDestroyOnLoad (UI);
+		DontDestroyOnLoad (UI);
+		DontDestroyOnLoad (Credits);
+		DontDestroyOnLoad (Logo);
+		DontDestroyOnLoad (Instructions);
+		DontDestroyOnLoad (Results);
+
         DontDestroyOnLoad(this);
     }
     

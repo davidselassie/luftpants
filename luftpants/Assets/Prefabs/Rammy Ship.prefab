@@ -1060,11 +1060,11 @@ MonoBehaviour:
   immortal: 0
   useThreeParticleTypes: 1
   lowDamage: {fileID: 19800004}
-  lowDamageEmissionRate: 5
+  lowDamageEmissionRate: 10
   medDamage: {fileID: 19800000}
-  medDamageEmissionRate: 5
+  medDamageEmissionRate: 10
   highDamage: {fileID: 19800002}
-  highDamageEmissionRate: 5
+  highDamageEmissionRate: 10
   deathPrefab: {fileID: 100000, guid: dc70a477d0dd04d19a7fa4f9b6d0912c, type: 2}
 --- !u!114 &11400008
 MonoBehaviour:

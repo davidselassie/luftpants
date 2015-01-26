@@ -128,7 +128,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106709}
-  m_LocalPosition: {x: 6.9000001, y: 0, z: 0}
+  m_LocalPosition: {x: 10.3599997, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
@@ -281,9 +281,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: 0
   burstSpeed: 500
-  spinSpeed: 10
-  burstSeconds: .5
-  cooldownSeconds: 4
+  spinSpeed: 20
+  burstSeconds: .125
+  cooldownSeconds: 6
   thrusterParticles: {fileID: 0}
   maxEmissionRate: 5
 --- !u!114 &11400002
@@ -303,11 +303,11 @@ MonoBehaviour:
   immortal: 0
   useThreeParticleTypes: 1
   lowDamage: {fileID: 19800004}
-  lowDamageEmissionRate: 5
+  lowDamageEmissionRate: 10
   medDamage: {fileID: 19800006}
-  medDamageEmissionRate: 5
+  medDamageEmissionRate: 10
   highDamage: {fileID: 19800008}
-  highDamageEmissionRate: 5
+  highDamageEmissionRate: 10
   deathPrefab: {fileID: 100000, guid: dc70a477d0dd04d19a7fa4f9b6d0912c, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
