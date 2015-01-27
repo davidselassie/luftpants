@@ -5,6 +5,7 @@ public class TorpedoLauncherControl : APlayerControlledComponent {
 	public GameObject torpedoPrefab;
 	public Transform muzzle;
 	public ParticleSystem muzzleFlash;
+	public ParticleSystem muzzleSmoke;
 	public float reloadSeconds = 1.0f;
 	
 	protected float lastFireTime;
@@ -16,6 +17,7 @@ public class TorpedoLauncherControl : APlayerControlledComponent {
 	
 	void FixedUpdate () {
 		if (GetButtonDown ("A")) {
+		// if (Input.GetKeyDown("space")) { // for testing
 			if (this.lastTorpedo == null) {
 				Fire();
 			} else {
@@ -39,7 +41,10 @@ public class TorpedoLauncherControl : APlayerControlledComponent {
             this.lastFireTime = Time.time;
 			if (this.muzzleFlash != null) {
 				this.muzzleFlash.Play();
+				// add this pup pup for smoke burst at muzzle flash?
+				//this.muzzleSmoke.Play ();
 			}
+
             
             AudioSource audio = GetComponent<AudioSource> ();
             if (audio != null) {
