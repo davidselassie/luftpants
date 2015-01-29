@@ -1,25 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ShrapnelSpawner : MonoBehaviour {
-	public GameObject shrapnelPrefab;
-	public int numPieces = 6;
-	public float spawnOffset = 1.0f;
-    public float speed = 10.0f;
-	public float lifetimeSeconds = 2.0f;
-	
-	void Awake () {
-		for (int i = 0; i < this.numPieces; i++) {
-			float velAngle = (float) i / (float) this.numPieces * 360.0f;
-			Quaternion rot = Quaternion.Euler(0.0f, velAngle, 0.0f);
+/// <summary>
+/// On creation, generates shrapnel based on a prefab that will self destruct.
+/// </summary>
+public class ShrapnelSpawner : MonoBehaviour
+{
+    public GameObject ShrapnelPrefab;
+    public int NumPieces = 6;
+    public float SpawnOffset = 1.0f;
+    public float Speed = 10.0f;
+    public float LifetimeSeconds = 2.0f;
+    
+    void Awake()
+    {
+        for (int i = 0; i < NumPieces; i++)
+        {
+            float velAngle = (float)i / (float)NumPieces * 360.0f;
+            var rot = Quaternion.Euler(0.0f, velAngle, 0.0f);
 
+            var newShrapnel = (GameObject)Instantiate(
+                ShrapnelPrefab,
+                rot * Vector3.forward * SpawnOffset + transform.position,
+                transform.rotation);
+            newShrapnel.rigidbody.velocity = rot * Vector3.forward * Speed;
+            newShrapnel.rigidbody.AddTorque(Random.rotation * Vector3.up);
 
-			GameObject newShrapnel = (GameObject) Instantiate(this.shrapnelPrefab, rot * Vector3.forward * spawnOffset + transform.position, transform.rotation);
-			newShrapnel.rigidbody.velocity = rot * Vector3.forward * this.speed;
-			newShrapnel.rigidbody.AddTorque(Random.rotation * Vector3.up);
-
-			SelfDestructing destruct = newShrapnel.AddComponent<SelfDestructing>();
-			destruct.lifetimeSeconds = this.lifetimeSeconds;
-		}
-	}
+            var destruct = newShrapnel.AddComponent<SelfDestructingBehavior>();
+            destruct.LifetimeSeconds = LifetimeSeconds;
+        }
+    }
 }

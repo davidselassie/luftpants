@@ -6,12 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Full Game Beginning.unity
+    path: Assets/Scenes/Main.unity
   - enabled: 1
-    path: Assets/Scenes/CityLevel - Kyle.unity
+    path: Assets/Scenes/City Level.unity
   - enabled: 1
-    path: Assets/Scenes/DesertLevel - Kyle.unity
-  - enabled: 1
-    path: Assets/Scenes/CityLevel.unity
-  - enabled: 1
-    path: Assets/Scenes/Nathan Desert.unity
+    path: Assets/Scenes/Desert Level.unity

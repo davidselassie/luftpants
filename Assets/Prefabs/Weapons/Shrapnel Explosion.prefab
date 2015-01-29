@@ -99,11 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ddc161b3510d4415ba8baef1efc5c4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shrapnelPrefab: {fileID: 100000, guid: c58c0a373dadc9547846ff2e4f6d23b5, type: 2}
-  numPieces: 6
-  spawnOffset: 1
-  speed: 10
-  lifetimeSeconds: 1
+  ShrapnelPrefab: {fileID: 100000, guid: c58c0a373dadc9547846ff2e4f6d23b5, type: 2}
+  NumPieces: 6
+  SpawnOffset: 1
+  Speed: 10
+  LifetimeSeconds: 2
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db40a5f30e0de41e0a550529e6a14a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetimeSeconds: 1
+  LifetimeSeconds: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
