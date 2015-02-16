@@ -1,18 +1,25 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public abstract class SafeMonoBehavior : MonoBehaviour {
-	private bool inQuit = false;
+/// <summary>
+/// Provides a SafeOnDestroy that only fires when an object is destroyed *in game* not during simulator shutdown.
+/// </summary>
+public abstract class SafeMonoBehavior : MonoBehaviour
+{
+    private bool _inQuit = false;
 
-	void OnDestroy () {
-		if (!this.inQuit) {
-			SafeOnDestroy ();
-		}
-	}
+    void OnDestroy()
+    {
+        if (!_inQuit)
+        {
+            SafeOnDestroy();
+        }
+    }
 
-	public abstract void SafeOnDestroy ();
+    public abstract void SafeOnDestroy();
 
-	void OnApplicationQuit () {
-		this.inQuit = true;
-	}
+    void OnApplicationQuit()
+    {
+        _inQuit = true;
+    }
 }
