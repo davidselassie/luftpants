@@ -497,7 +497,7 @@ AudioSource:
   m_GameObject: {fileID: 100002}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: ea9fa0ae8e9f244919371bdee6ad6256, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 21398c9619541a644a4456892d4854d0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .5
   m_Pitch: 1
@@ -555,15 +555,15 @@ AudioSource:
   m_GameObject: {fileID: 100006}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 3cefdc804c8b14159a4c6d2772603190, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5b059be861085ee49911a91f1712d509, type: 3}
   m_PlayOnAwake: 0
   m_Volume: .75
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 150
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

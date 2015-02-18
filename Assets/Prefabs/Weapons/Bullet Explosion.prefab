@@ -69,7 +69,7 @@ AudioSource:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7deb9b8a5139ace4f81070740dc52afa, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 5c985e88e7956c74ab50ce4f08eaf208, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db40a5f30e0de41e0a550529e6a14a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifetimeSeconds: 2
+  LifetimeSeconds: 5
 --- !u!198 &19800000
 ParticleSystem:
   m_ObjectHideFlags: 1
