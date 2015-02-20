@@ -432,9 +432,9 @@ AudioSource:
   m_GameObject: {fileID: 1093247108}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: f272774598ca64dd0844d22e805a73e0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1fc8e7c1804d44c438f11e8bd80e2152, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: .75
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -910,7 +910,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1963725101}
-  m_LocalRotation: {x: -1.15202326e-07, y: .707106709, z: -.707106829, w: -1.15202312e-07}
+  m_LocalRotation: {x: -1.15202333e-07, y: .707106769, z: -.707106888, w: -1.15202319e-07}
   m_LocalPosition: {x: -.0399932861, y: .839996338, z: 0}
   m_LocalScale: {x: 2.0525701, y: 1, z: 1.19961858}
   m_Children: []
@@ -980,7 +980,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2076753273}
-  m_LocalRotation: {x: -1.15202326e-07, y: .707106709, z: -.707106829, w: -1.15202312e-07}
+  m_LocalRotation: {x: -1.15202333e-07, y: .707106769, z: -.707106888, w: -1.15202319e-07}
   m_LocalPosition: {x: -.0399932861, y: .839996338, z: 0}
   m_LocalScale: {x: 2.0525701, y: 1, z: 1.19961858}
   m_Children: []
