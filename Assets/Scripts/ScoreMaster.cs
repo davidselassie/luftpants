@@ -43,13 +43,15 @@ public class ScoreMaster : MonoBehaviour {
         var shipTeams = new List<Team>();
         for (var i = 0; i < PlayerIndexes.Count; i += 2)
         {
+            Debug.Log("shuffledPlayerIndexes[" + i + "] =" + shuffledPlayerIndexes [i]);
+            Debug.Log("shuffledPlayerIndexes[" + i + 1 + "] =" + shuffledPlayerIndexes [i + 1]);
             shipTeams.Add(new Team {
                 PlayerA = shuffledPlayerIndexes [i],
                 PlayerB = shuffledPlayerIndexes [i + 1]
             });
         }
         
-        return Enumerable.Range(0, shipCount - 1).Select(shipIndex => {
+        return Enumerable.Range(0, shipCount).Select(shipIndex => {
             Transform spawnPoint = shuffledSpawnPoints [shipIndex];
             GameObject shipPrefab = shuffledShips [shipIndex % shuffledShips.Count];
             Team team = shipTeams [shipIndex];

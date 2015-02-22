@@ -422,8 +422,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1093247111}
-  - 114: {fileID: 1093247110}
-  - 114: {fileID: 1093247109}
   - 114: {fileID: 1093247114}
   - 114: {fileID: 1093247113}
   m_Layer: 0
@@ -433,45 +431,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1093247109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1093247108}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9febedece2ea6475f95f8ed947787409, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SpawnPoints: []
-  ShipPrefabs: []
-  PlayerIndexes: 
---- !u!114 &1093247110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1093247108}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc5c9bf0fd202d24cb3cd11bfdc65a03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  UI: {fileID: 1654819862}
-  Logo: {fileID: 1963725101}
-  LogoDisplaySeconds: 1
-  Instructions: {fileID: 1650581351}
-  InstructionDisplaySeconds: 1
-  ScoreDisplay: {fileID: 0}
-  ScoreDisplaySeconds: 1
-  Credits: {fileID: 1851783671}
-  Scenes:
-  - City Level
-  - Nathan Desert
-  PlayerIndexes: 
-  ShipPrefabs: []
-  Rounds: 3
 --- !u!4 &1093247111
 Transform:
   m_ObjectHideFlags: 0
@@ -515,7 +474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreMaster: {fileID: 1093247113}
   UI: {fileID: 1654819862}
-  Logo: {fileID: 1963725101}
+  Logo: {fileID: 1243800021}
   Instructions: {fileID: 1650581351}
   Credits: {fileID: 1851783671}
   Results: {fileID: 1719471705}
@@ -909,7 +868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1963725102
 Renderer:
   m_ObjectHideFlags: 0
