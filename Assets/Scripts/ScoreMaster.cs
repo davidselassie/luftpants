@@ -29,35 +29,69 @@ public class ScoreMaster : MonoBehaviour {
             gameState = GetComponent<GameState> ();
     }
     
-    void SpawnShips(){
-        System.Diagnostics.Debug.Assert(this.playerCount % 2 == 0);
-        int shipCount = this.playerCount / 2;
-        System.Diagnostics.Debug.Assert(this.spawnPoints.Count >= shipCount);
-        System.Diagnostics.Debug.Assert(this.shipPrefabs.Count >= shipCount);
-        
-        List<GameObject> shuffledShips = this.shipPrefabs.OrderBy(i => UnityEngine.Random.value).ToList();
-        List<int> shuffledIndex = Enumerable.Range(0, this.playerCount).OrderBy(i => UnityEngine.Random.value).ToList();
-        List<Team> shipTeams = new List<Team>();
-        for (int i = 0; i < this.playerCount; i += 2) {
-            shipTeams.Add(new Team(shuffledIndex[i], shuffledIndex[i + 1]));
+    public List<GameObject> SpawnShips(){
+        List<int> PlayerIndexes = Enumerable.Range(0, this.playerCount).ToList();
+        if (PlayerIndexes.Count % 2 != 0)
+        {
+            Debug.LogError("Uneven player count!");
         }
-        System.Diagnostics.Debug.Assert(shipTeams.Count == shipCount);
+        int shipCount = PlayerIndexes.Count / 2;
         
-        this.playerShips = Enumerable.Range(0, shipCount).Select(shipIndex => {
-            Transform spawnPoint = this.spawnPoints[shipIndex];
-            GameObject shipPrefab = shuffledShips[shipIndex];
-            Team team = shipTeams[shipIndex];
+        List<GameObject> shuffledShips = shipPrefabs.OrderBy(i => UnityEngine.Random.value).ToList();
+        List<Transform> shuffledSpawnPoints = spawnPoints.OrderBy(i => UnityEngine.Random.value).ToList();
+        List<int> shuffledPlayerIndexes = PlayerIndexes.OrderBy(i => UnityEngine.Random.value).ToList();
+        var shipTeams = new List<Team>();
+        for (var i = 0; i < PlayerIndexes.Count; i += 2)
+        {
+            shipTeams.Add(new Team {
+                PlayerA = shuffledPlayerIndexes [i],
+                PlayerB = shuffledPlayerIndexes [i + 1]
+            });
+        }
+        
+        return Enumerable.Range(0, shipCount - 1).Select(shipIndex => {
+            Transform spawnPoint = shuffledSpawnPoints [shipIndex];
+            GameObject shipPrefab = shuffledShips [shipIndex % shuffledShips.Count];
+            Team team = shipTeams [shipIndex];
             
-            GameObject newShip = (GameObject) Instantiate(shipPrefab, spawnPoint.position, spawnPoint.rotation);
+            var newShip = (GameObject)Instantiate(shipPrefab, spawnPoint.position, spawnPoint.rotation);
             
-            List<APlayerControlledComponent> playerComponents = newShip.GetComponentsInChildren<APlayerControlledComponent>().ToList();
-            System.Diagnostics.Debug.Assert(playerComponents.Count == 2);
-            playerComponents[0].PlayerIndex = team.PlayerA;
-            playerComponents[1].PlayerIndex = team.PlayerB;
+            var teamComponent = newShip.GetComponentInChildren<TeamControlledShipComponent>();
+            teamComponent.PlayerAIndex = team.PlayerA;
+            teamComponent.PlayerBIndex = team.PlayerB;
+            teamComponent.Sync();
             Debug.Log(String.Format("Players {0} and {1} are together.", team.PlayerA, team.PlayerB));
             
             return newShip;
         }).ToList();
+//        System.Diagnostics.Debug.Assert(this.playerCount % 2 == 0);
+//        int shipCount = this.playerCount / 2;
+//        System.Diagnostics.Debug.Assert(this.spawnPoints.Count >= shipCount);
+//        System.Diagnostics.Debug.Assert(this.shipPrefabs.Count >= shipCount);
+//        
+//        List<GameObject> shuffledShips = this.shipPrefabs.OrderBy(i => UnityEngine.Random.value).ToList();
+//        List<int> shuffledIndex = Enumerable.Range(0, this.playerCount).OrderBy(i => UnityEngine.Random.value).ToList();
+//        List<Team> shipTeams = new List<Team>();
+//        for (int i = 0; i < this.playerCount; i += 2) {
+//            shipTeams.Add(new Team(shuffledIndex[i], shuffledIndex[i + 1]));
+//        }
+//        System.Diagnostics.Debug.Assert(shipTeams.Count == shipCount);
+//        
+//        this.playerShips = Enumerable.Range(0, shipCount).Select(shipIndex => {
+//            Transform spawnPoint = this.spawnPoints[shipIndex];
+//            GameObject shipPrefab = shuffledShips[shipIndex];
+//            Team team = shipTeams[shipIndex];
+//            
+//            GameObject newShip = (GameObject) Instantiate(shipPrefab, spawnPoint.position, spawnPoint.rotation);
+//            
+//            List<APlayerControlledComponent> playerComponents = newShip.GetComponentsInChildren<APlayerControlledComponent>().ToList();
+//            System.Diagnostics.Debug.Assert(playerComponents.Count == 2);
+//            playerComponents[0].PlayerIndex = team.PlayerA;
+//            playerComponents[1].PlayerIndex = team.PlayerB;
+//            Debug.Log(String.Format("Players {0} and {1} are together.", team.PlayerA, team.PlayerB));
+//            
+//            return newShip;
+//        }).ToList();
     }
     
     
